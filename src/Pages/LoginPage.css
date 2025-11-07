@@ -1,0 +1,146 @@
+/* Background */
+.login-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #7e3ff2, #4460f1);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Card */
+.login-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Logo */
+.logo-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo-icon {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(135deg, #7b4cf1, #517af5);
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.star {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #ffd43b;
+  color: white;
+  border-radius: 50%;
+  font-size: 10px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.brain-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-section h2 {
+  color: #6b21a8;
+  margin-top: 15px;
+  font-size: 22px;
+}
+
+.logo-section p {
+  color: #666;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Inputs */
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-top: 20px;
+}
+
+label {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 6px;
+  margin-top: 12px;
+}
+
+.input-box {
+  background: #f3f3f3;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 5px;
+}
+
+.input-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 15px;
+  color: #444;
+}
+
+/* Button */
+button {
+  background: linear-gradient(90deg, #7e3ff2, #4460f1);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Create Account Link */
+.create-text {
+  margin-top: 15px;
+  color: #555;
+  font-size: 14px;
+}
+
+.create-text a {
+  color: #7e3ff2;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.create-text a:hover {
+  text-decoration: underline;
+}
+
+/* Demo Info Box */
+.demo-box {
+  background: #f0f7ff;
+  border: 1px solid #cde0ff;
+  color: #333;
+  font-size: 13px;
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 20px;
+  text-align: left;
+  line-height: 1.4;
+}
