@@ -1,50 +1,44 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./LoginPage.css";
-import Register from "./Register";
+import "./LoginPage.css"; // reuse same style for now
 
-
-const LoginPage = () => {
+const Register = () => {
     return (
         <div className="login-container">
             <div className="login-card">
                 <div className="logo">
-                    <img
-                        src="src/assets/brainimg.png"
-                        alt="Brain Logo"
-                    />
+                    <img src="src/assets/brainimg.png" alt="Brain Logo" />
                 </div>
 
-                <h4>Welcome Back</h4>
-                <p className="subtitle">
-                    Sign in to continue your brain training journey
-                </p>
+                <h4>Create Account</h4>
+                <p className="subtitle">Join the brain training community</p>
 
                 <form>
+                    <label>Full Name</label>
+                    <div className="input-group">
+                        <input type="text" placeholder="Your Name" required />
+                    </div>
+
                     <label>Email Address</label>
                     <div className="input-group">
-                        <span className="icon"></span>
                         <input type="email" placeholder="you@example.com" required />
                     </div>
 
                     <label>Password</label>
                     <div className="input-group">
-                        <span className="icon"></span>
                         <input type="password" placeholder="••••••••" required />
                     </div>
 
-                    <button type="submit" className="signin-btn">
-                        Sign In
-                    </button>
+                    <button type="submit" className="signin-btn">Register</button>
                 </form>
 
                 <p className="register-text">
-                    Don’t have an account?{" "}
-                    <Link to="/register">Create one for free</Link>
+                    Already have an account?{" "}
+                    <Link to="/signin">Sign in</Link>
                 </p>
             </div>
         </div>
     );
 };
 
-export default LoginPage;
+export default Register;
