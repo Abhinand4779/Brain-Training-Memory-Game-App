@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./LoginPage.css"; // reuse same style for now
+import "./LoginPage.css"; 
 
 const Register = () => {
     return (
@@ -29,12 +29,17 @@ const Register = () => {
                         <input type="password" placeholder="••••••••" required />
                     </div>
 
+                    <label>ReEnter Password</label>
+                    <div className="input-group">
+                        <input type="password" placeholder="••••••••" required />
+                    </div>
+
                     <button type="submit" className="signin-btn">Register</button>
                 </form>
 
                 <p className="register-text">
                     Already have an account?{" "}
-                    <Link to="/signin">Sign in</Link>
+                    <Link to="/">Sign in</Link>
                 </p>
             </div>
         </div>

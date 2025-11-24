@@ -1,16 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./LoginPage.css";
 import Register from "./Register";
 
 
-const LoginPage = () => {
+const LoginPage = ({ setLoggedIn }) => {
+    const navigate = useNavigate();
+
+    const handleLogin = () => {
+    
+
+    setLoggedIn(true);     
+    navigate("/welcome");  
+  };
     return (
         <div className="login-container">
             <div className="login-card">
                 <div className="logo">
                     <img
-                        src="src/assets/brainimg.png"
+                        src="assets/brainimg.png"
                         alt="Brain Logo"
                     />
                 </div>
@@ -33,7 +41,7 @@ const LoginPage = () => {
                         <input type="password" placeholder="••••••••" required />
                     </div>
 
-                    <button type="submit" className="signin-btn">
+                    <button onClick={handleLogin} type="submit" className="signin-btn">
                         Sign In
                     </button>
                 </form>

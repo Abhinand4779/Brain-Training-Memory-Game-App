@@ -1,0 +1,54 @@
+import React from "react";
+import "./Welcome.css";
+
+export default function Welcome() {
+  return (
+    <div className="welcome-container">
+      <div className="welcome-card">
+
+        <div className="logo">
+          <img src="brainimg.png" alt="" />
+        </div>
+
+        <h2>Welcome to Brain Training</h2>
+
+        <p className="subtitle">
+          Train your mind with fun, scientifically-backed exercises designed to 
+          improve memory, focus, and cognitive abilities.
+        </p>
+
+        <div className="info-box">
+          <p>
+            Our program is based on cognitive neuroscience research and proven techniques.
+            Just <strong>5–15 minutes a day</strong> of consistent practice can lead to 
+            measurable improvements in mental performance. Build sustainable habits with 
+            gamified challenges and track your progress over time.
+          </p>
+        </div>
+
+        <div className="features">
+          <div className="feature-card">
+            <div className="icon">🎯</div>
+            <h4>Daily Challenges</h4>
+            <p>5 scientifically-designed games that adapt to your skill level</p>
+          </div>
+
+          <div className="feature-card">
+            <div className="icon">⚡</div>
+            <h4>Track Progress</h4>
+            <p>Monitor brain age, accuracy, and cognitive improvements</p>
+          </div>
+
+          <div className="feature-card">
+            <div className="icon">🔥</div>
+            <h4>Build Streaks</h4>
+            <p>Daily habit building with rewards</p>
+          </div>
+        </div>
+
+        <button className="get-started-btn">Get Started</button>
+
+      </div>
+    </div>
+  );
+}
