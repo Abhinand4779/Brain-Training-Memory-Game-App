@@ -7,7 +7,7 @@ export default function Welcome() {
       <div className="welcome-card">
 
         <div className="logo">
-          <img src="brainimg.png" alt="" />
+          <img src="src/assets/brainimg.png" alt="" />
         </div>
 
         <h2>Welcome to Brain Training</h2>

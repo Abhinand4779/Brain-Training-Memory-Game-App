@@ -1,8 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./LoginPage.css"; 
 
 const Register = () => {
+
+    const navigate = useNavigate();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        navigate("/");
+        
+    };
+
     return (
         <div className="login-container">
             <div className="login-card">
@@ -13,7 +22,7 @@ const Register = () => {
                 <h4>Create Account</h4>
                 <p className="subtitle">Join the brain training community</p>
 
-                <form>
+                <form onSubmit={handleSubmit}>
                     <label>Full Name</label>
                     <div className="input-group">
                         <input type="text" placeholder="Your Name" required />
@@ -41,6 +50,7 @@ const Register = () => {
                     Already have an account?{" "}
                     <Link to="/">Sign in</Link>
                 </p>
+                
             </div>
         </div>
     );
