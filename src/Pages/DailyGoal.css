@@ -1,0 +1,67 @@
+.goal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f7f9ff;
+}
+
+.goal-card {
+  background: white;
+  padding: 40px;
+  width: 600px;
+  border-radius: 16px;
+  box-shadow: 0 5px 30px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.option {
+  border: 2px solid #ddd;
+  padding: 20px;
+  width: 130px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.option:hover {
+  border-color: #9b59ff;
+}
+
+.option.selected {
+  border-color: #9b59ff;
+  background: #f4ebff;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.back-btn {
+  padding: 12px 28px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+}
+
+.continue-btn {
+  padding: 12px 28px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(to right, #7b5bff, #6eb7ff);
+  color: white;
+  cursor: pointer;
+}

@@ -28,17 +28,14 @@ const LoginPage = ({ setLo }) => {
       alert("Incorrect email or password!");
     }
   };
-
   return (
     <div className="login-container">
       <div className="login-card">
         <div className="logo">
           <img src="src/assets/brainimg.png" alt="Brain Logo" />
         </div>
-
         <h4>Welcome Back</h4>
         <p className="subtitle">Sign in to continue your brain training journey</p>
-
         <form onSubmit={handleLogin}>
           <label>Email Address</label>
           <div className="input-group">
@@ -50,7 +47,6 @@ const LoginPage = ({ setLo }) => {
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-
           <label>Password</label>
           <div className="input-group">
             <input
@@ -75,5 +71,4 @@ const LoginPage = ({ setLo }) => {
     </div>
   );
 };
-
 export default LoginPage;

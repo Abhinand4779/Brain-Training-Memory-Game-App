@@ -18,7 +18,6 @@ const Register = () => {
                 <div className="logo">
                     <img src="src/assets/brainimg.png" alt="Brain Logo" />
                 </div>
-
                 <h4>Create Account</h4>
                 <p className="subtitle">Join the brain training community</p>
 
@@ -49,8 +48,7 @@ const Register = () => {
                 <p className="register-text">
                     Already have an account?{" "}
                     <Link to="/">Sign in</Link>
-                </p>
-                
+                </p>                
             </div>
         </div>
     );
