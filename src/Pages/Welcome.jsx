@@ -1,7 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";   
 import "./Welcome.css";
 
 export default function Welcome() {
+  const navigate = useNavigate();   
+
+  const handleStart = () => {
+    navigate("/dailygoal");         
+  };
+
   return (
     <div className="welcome-container">
       <div className="welcome-card">
@@ -21,8 +28,7 @@ export default function Welcome() {
           <p>
             Our program is based on cognitive neuroscience research and proven techniques.
             Just <strong>5–15 minutes a day</strong> of consistent practice can lead to 
-            measurable improvements in mental performance. Build sustainable habits with 
-            gamified challenges and track your progress over time.
+            measurable improvements in mental performance.
           </p>
         </div>
 
@@ -45,7 +51,12 @@ export default function Welcome() {
             <p>Daily habit building with rewards</p>
           </div>
         </div>
-        <button className="get-started-btn">Get Started</button>
+
+        
+        <button className="get-started-btn" onClick={handleStart}>
+          Get Started
+        </button>
+
       </div>
     </div>
   );

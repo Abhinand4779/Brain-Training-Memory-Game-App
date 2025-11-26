@@ -6,12 +6,12 @@ import Register from "./Register";
 const LoginPage = ({ setLo }) => {
   const navigate = useNavigate();
 
-  // States for input fields
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleLogin = (e) => {
-    e.preventDefault(); // stop form refresh
+    e.preventDefault();
 
     const savedUser = JSON.parse(localStorage.getItem("user"));
 
@@ -20,7 +20,6 @@ const LoginPage = ({ setLo }) => {
       return;
     }
 
-    // Check entered values
     if (email === savedUser.email && password === savedUser.password) {
       setLo(true);
       navigate("/welcome");

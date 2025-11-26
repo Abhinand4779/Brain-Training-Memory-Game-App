@@ -10,8 +10,8 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [repassword, setRepassword] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
     if (password !== repassword) {
       alert("Passwords do not match!");

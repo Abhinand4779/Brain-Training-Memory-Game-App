@@ -1,0 +1,139 @@
+/* Main Container */
+.focus-container {
+  max-width: 650px;
+  margin: 80px auto;
+  padding: 40px 50px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  text-align: center;
+  animation: fadeIn 0.4s ease;
+}
+
+/* Heading */
+.focus-container h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.focus-container p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* Each Focus Card */
+.focus-card {
+  width: 100%;
+  padding: 18px 20px;
+  border-radius: 12px;
+  background: #f9f9ff;
+  cursor: pointer;
+  margin: 18px 0;
+  text-align: left;
+  transition: all 0.25s ease;
+  border: 2px solid transparent;
+}
+
+.focus-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #2b2b2b;
+}
+
+.focus-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Hover Effect */
+.focus-card:hover {
+  background: #f1edff;
+  border-color: #c2b8ff;
+  transform: translateY(-2px);
+}
+
+/* Selected Effect */
+.focus-card.selected {
+  background: #ece3ff;
+  border-color: #a185ff;
+  box-shadow: 0 3px 10px rgba(145, 100, 255, 0.2);
+}
+
+/* Buttons */
+.start-btn {
+  /* width: 100%; */
+  padding: 12px 125px;
+  margin-top: 25px;
+  background: linear-gradient(90deg, #b993ff, #7f78ff);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.start-btn:disabled {
+  background: #e0e0e0;
+  color: #888;
+  cursor: not-allowed;
+}
+
+.start-btn:not(:disabled):hover {
+  opacity: 0.9;
+}
+
+/* Back Button */
+.back-btnn {
+  margin-top: 15px;
+  /* width: 100%; */
+  padding: 12px 125px;
+  border: 2px solid #ddd;
+  background: white;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  color: #333;
+}
+
+.back-btn:hover {
+  border-color: #bbb;
+  background: #f7f7f7;
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .focus-container {
+    margin: 40px 15px;
+    padding: 25px 125px;
+  }
+
+  .focus-card {
+    padding: 12px;
+  }
+
+  .start-btn,
+  .back-btn {
+    font-size: 15px;
+
+  }
+}

@@ -9,13 +9,13 @@ export default function DailyGoal() {
   const handleContinue = () => {
    
     localStorage.setItem("dailyGoal", selectedTime);
-    navigate("/home"); 
+    navigate("/focus"); 
   };
 
   return (
     <div className="goal-container">
       <div className="goal-card">
-        <h2>Set Your Daily Goal</h2>
+        <h2 className="main-h">Set Your Daily Goal</h2>
         <p className="subtitle">How much time do you want to spend each day?</p>
 
         <div className="options">
@@ -32,7 +32,7 @@ export default function DailyGoal() {
         </div>
 
         <div className="buttons">
-          <button className="back-btn" onClick={() => navigate("/dashboard")}>
+          <button className="back-btn" onClick={() => navigate("/welcome")}>
             Back
           </button>
           <button className="continue-btn" onClick={handleContinue}>

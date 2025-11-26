@@ -15,9 +15,14 @@
   text-align: center;
 }
 
+.main-h{
+  align-content: left;
+}
+
 .subtitle {
   color: #666;
   margin-bottom: 25px;
+  align-items: left;
 }
 
 .options {
@@ -50,7 +55,7 @@
 }
 
 .back-btn {
-  padding: 12px 28px;
+  padding: 12px 125px;
   border: 1px solid #ccc;
   border-radius: 8px;
   background: white;
@@ -58,9 +63,9 @@
 }
 
 .continue-btn {
-  padding: 12px 28px;
+  padding: 12px 125px;
   border-radius: 8px;
-  border: none;
+  border: 1px solid #ccc;
   background: linear-gradient(to right, #7b5bff, #6eb7ff);
   color: white;
   cursor: pointer;

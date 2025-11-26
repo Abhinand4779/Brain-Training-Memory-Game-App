@@ -5,6 +5,7 @@ import LoginPage from "./Pages/LoginPage";
 import Register from "./Pages/Register";
 import Welcome from "./Pages/Welcome";
 import DailyGoal from "./Pages/DailyGoal";
+import Focus from "./Pages/Focus";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -12,13 +13,13 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Login Page */}
+        
         <Route path="/" element={<LoginPage setLo={setLoggedIn} />} />
 
-        {/* Register Page */}
+       
         <Route path="/register" element={<Register />} />
 
-        {/* Welcome Page — PROTECTED */}
+        
         <Route
           path="/welcome"
           element={
@@ -26,7 +27,7 @@ function App() {
           }
         />
 
-        {/* DailyGoal Page — PROTECTED */}
+        
         <Route
           path="/dailygoal"
           element={
@@ -34,7 +35,9 @@ function App() {
           }
         />
 
-        {/* Any unknown route → redirect to login */}
+        <Route path="/focus" element={<Focus />} />
+
+       
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
