@@ -45,9 +45,7 @@ export default function Welcome() {
             <p>Daily habit building with rewards</p>
           </div>
         </div>
-
         <button className="get-started-btn">Get Started</button>
-
       </div>
     </div>
   );
