@@ -11,7 +11,7 @@ export default function Welcome() {
 
   return (
     <div className="welcome-container">
-      <div className="welcome-card">
+      <div className="welcomes-card">
 
         <div className="logo">
           <img src="src/assets/brainimg.png" alt="" />

@@ -49,7 +49,7 @@ const Focus = () => {
                 <button
                     className="start-btn"
                     disabled={selected.length === 0}
-                    onClick={() => navigate("/dailygoal")}
+                    onClick={() => navigate("/dashboard")}
                 >
                     Start Training
                 </button>

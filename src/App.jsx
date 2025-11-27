@@ -6,6 +6,7 @@ import Register from "./Pages/Register";
 import Welcome from "./Pages/Welcome";
 import DailyGoal from "./Pages/DailyGoal";
 import Focus from "./Pages/Focus";
+import Dashboard from "./Components/Dashboard";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -39,6 +40,8 @@ function App() {
 
        
         <Route path="*" element={<Navigate to="/" />} />
+
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </Router>
   );

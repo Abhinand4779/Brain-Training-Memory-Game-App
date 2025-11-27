@@ -1,0 +1,59 @@
+.sidebar {
+  width: 250px;
+  background: #ffffff;
+  border-right: 1px solid #eee;
+  padding: 20px;
+}
+
+.streak-box {
+  background: linear-gradient(135deg, #ff4d4d, #ff884d);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.menu-list li {
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.menu-list li.active {
+  background: #a855f7;
+  color: white;
+}
+
+.version-box {
+  position: absolute;
+  bottom: 20px;
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+  width: 200px;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.menu-link:hover {
+  background: #e9d5ff;
+}
+
+.menu-list .active {
+  background: #a855f7;
+  color: white;
+}
