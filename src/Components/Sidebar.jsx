@@ -31,6 +31,12 @@ export default function Sidebar() {
         <li>
           <Link to="/achievements" className="menu-link">Achievements</Link>
         </li>
+        <li>
+            <Link to="/About & Info" className="menu-link">About & Info</Link>
+        </li>
+        <li>
+            <Link to="/Settings" className="menu-link">Settings</Link>
+        </li>
       </ul>
 
       <div className="version-box">
