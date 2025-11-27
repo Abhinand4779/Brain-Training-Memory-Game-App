@@ -39,6 +39,8 @@ export default function Sidebar() {
         </li>
       </ul>
 
+    
+
       <div className="version-box">
         <p>Brain Training App</p>
         <span>Version 1.0</span>

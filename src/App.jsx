@@ -14,21 +14,32 @@ function App() {
   return (
     <Router>
       <Routes>
-        
-        <Route path="/" element={<LoginPage setLo={setLoggedIn} />} />
 
-       
-        <Route path="/register" element={<Register />} />
-
-        
         <Route
-          path="/welcome"
+          path="/"
           element={
-            loggedIn ? <Welcome /> : <Navigate to="/" />
+            <LoginPage setLo={setLoggedIn} />
           }
         />
 
-        
+
+        <Route
+          path="/register"
+          element={
+            <Register />
+          }
+        />
+
+
+        <Route
+          path="/welcome"
+          element={
+            loggedIn ? 
+            <Welcome /> : <Navigate to="/" />
+          }
+        />
+
+
         <Route
           path="/dailygoal"
           element={
@@ -36,12 +47,27 @@ function App() {
           }
         />
 
-        <Route path="/focus" element={<Focus />} />
+        <Route
+          path="/focus"
+          element={
+            <Focus />
+          }
+        />
 
-       
-        <Route path="*" element={<Navigate to="/" />} />
 
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route
+          path="*"
+          element={
+            <Navigate to="/" />
+          }
+        />
+
+        <Route
+          path="/dashboard"
+          element={
+            <Dashboard />
+          }
+        />
       </Routes>
     </Router>
   );

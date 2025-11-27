@@ -1,3 +1,12 @@
-export default function Achievements() {
-  return <h1>Achievements Page</h1>;
+
+import React from 'react'
+
+const Achievements = () => {
+  return (
+    <div>
+       <h1>Achievements Page</h1>
+    </div>
+  )
 }
+
+export default Achievements
