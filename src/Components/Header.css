@@ -1,23 +1,135 @@
-.header {
+/* MAIN HEADER BAR */
+.header-container {
+  width: 100%;
+  height: 48px;              /* SAME as screenshot */
+  padding: 5px 18px;         /* very compact */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: white;
+  border-bottom: 1px solid #e8e8e8;
 }
 
-.user-info {
+/* LEFT AREA */
+.header-left {
   display: flex;
   align-items: center;
-  gap: 20px;
 }
 
+/* SMALL LOGO BOX */
+.logo-box {
+  background: linear-gradient(135deg, #a200ff, #5a00ff);
+  padding: 6px;                /* small box */
+  border-radius: 10px;
+}
+
+.logo-icon {
+  width: 24px;                 /* SMALL icon */
+  height: 24px;
+}
+
+/* TITLE + SUBTITLE */
+.title-box h2 {
+  margin: 0;
+  margin-left: 8px;
+  font-size: 15px;             /* small heading */
+  font-weight: 600;
+  color: #333;
+}
+
+.title-box p {
+  margin: 0;
+  margin-left: 8px;
+  font-size: 10px;             /* tiny subtitle */
+  color: #888;
+  margin-top: -2px;
+}
+
+/* RIGHT AREA */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;                    /* reduced gap */
+}
+
+/* LEVEL BOX */
+.level-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;           /* compact pill */
+  background: #f8f1ff;
+  border: 1px solid #eadbff;
+  border-radius: 12px;
+  font-size: 11px;
+}
+
+.icon {
+  font-size: 12px;             /* small medal icon */
+}
+
+/* PROFILE SECTION */
+.profile-wrapper {
+  position: relative;
+}
+
+/* SMALL PROFILE CIRCLE */
 .profile-circle {
-  width: 40px;
-  height: 40px;
-  background: #7c3aed;
+  width: 32px;                 /* smaller circle */
+  height: 32px;
+  font-size: 14px;
+  background: linear-gradient(135deg, #9f00ff, #4f00ff);
   color: white;
-  border-radius: 50%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  font-weight: bold;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.online-dot {
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+  width: 7px;                  /* small dot */
+  height: 7px;
+  background: #0cc400;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+/* DROPDOWN MENU */
+.profile-menu {
+  position: absolute;
+  right: 0;
+  top: 40px;                   /* lowered based on small header */
+  width: 150px;
+  background: white;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  padding: 8px;
+  z-index: 10;
+}
+
+.email-text {
+  font-size: 11px;
+  color: #444;
+  padding: 6px 8px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 6px;
+}
+
+.menu-item {
+  width: 100%;
+  text-align: left;
+  padding: 6px 8px;
+  border: none;
+  background: none;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.menu-item:hover {
+  background: #f2e8ff;
 }

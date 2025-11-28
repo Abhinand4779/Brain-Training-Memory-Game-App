@@ -1,47 +1,49 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Sidebar.css";
-import QuickPractice from "../Pages/Quickpractice";
-import Progress from "../Pages/Progress";
-import Statistics from "../Pages/Statitics";
-import Achievements from "../Pages/Achievements";
 
 export default function Sidebar() {
   return (
     <div className="sidebar">
 
-      <div className="streak-box">
-        <h2>0</h2>
-        <p>Day Streak</p>
+      <div className="sidebar-scroll">
+        <div className="streak-card">
+          <h2>0</h2>
+          <p>Day Streak</p>
+        </div>
+
+        <p className="menu-title">MAIN MENU</p>
+
+        <NavLink to="/dashboard" className="menu-item">
+          Dashboard
+        </NavLink>
+
+        <NavLink to="/quickpractice" className="menu-item">
+          Quick Practice
+        </NavLink>
+
+        <NavLink to="/progress" className="menu-item">
+          Progress
+        </NavLink>
+
+        <NavLink to="/statistics" className="menu-item">
+          Statistics
+        </NavLink>
+
+        <NavLink to="/achievements" className="menu-item">
+          Achievements
+        </NavLink>
+
+        <NavLink to="/About" className="menu-item">
+          About & Info
+        </NavLink>
+
+        <NavLink to="/Settings" className="menu-item">
+          Settings
+        </NavLink>
       </div>
 
-      <ul className="menu-list">
-        <li>
-          <Link to="/dashboard" className="menu-link">Dashboard</Link>
-        </li>
-        <li>
-          <Link to="/quick-practice" className="menu-link">Quick Practice</Link>
-        </li>
-        <li>
-          <Link to="/progress" className="menu-link">Progress</Link>
-        </li>
-        <li>
-          <Link to="/statistics" className="menu-link">Statistics</Link>
-        </li>
-        <li>
-          <Link to="/achievements" className="menu-link">Achievements</Link>
-        </li>
-        <li>
-            <Link to="/About & Info" className="menu-link">About & Info</Link>
-        </li>
-        <li>
-            <Link to="/Settings" className="menu-link">Settings</Link>
-        </li>
-      </ul>
-
-    
-
-      <div className="version-box">
+      <div className="sidebar-footer">
         <p>Brain Training App</p>
         <span>Version 1.0</span>
       </div>

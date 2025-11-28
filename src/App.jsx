@@ -6,7 +6,16 @@ import Register from "./Pages/Register";
 import Welcome from "./Pages/Welcome";
 import DailyGoal from "./Pages/DailyGoal";
 import Focus from "./Pages/Focus";
+
+import DashboardLayout from "./Components/DashboardLayout";
+
 import Dashboard from "./Components/Dashboard";
+import QuickPractice from "./Pages/Quickpractice";
+import Progress from "./Pages/Progress";
+import Statistics from "./Pages/Statitics";
+import Achievements from "./Pages/Achievements";
+import About from "./Pages/About";
+import Settings from "./Pages/Settings";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -15,59 +24,41 @@ function App() {
     <Router>
       <Routes>
 
-        <Route
-          path="/"
-          element={
-            <LoginPage setLo={setLoggedIn} />
-          }
-        />
+        {/* LOGIN PAGE */}
+        <Route path="/" element={<LoginPage setLo={setLoggedIn} />} />
 
+        {/* REGISTER PAGE */}
+        <Route path="/register" element={<Register />} />
 
-        <Route
-          path="/register"
-          element={
-            <Register />
-          }
-        />
-
-
+        {/* WELCOME PAGE */}
         <Route
           path="/welcome"
-          element={
-            loggedIn ? 
-            <Welcome /> : <Navigate to="/" />
-          }
+          element={loggedIn ? <Welcome /> : <Navigate to="/" />}
         />
 
-
+        {/* DAILY GOAL PAGE */}
         <Route
           path="/dailygoal"
-          element={
-            loggedIn ? <DailyGoal /> : <Navigate to="/" />
-          }
+          element={loggedIn ? <DailyGoal /> : <Navigate to="/" />}
         />
 
-        <Route
-          path="/focus"
-          element={
-            <Focus />
-          }
-        />
+        {/* FOCUS PAGE */}
+        <Route path="/focus" element={<Focus />} />
 
 
-        <Route
-          path="*"
-          element={
-            <Navigate to="/" />
-          }
-        />
+        {/* ALL PAGES WITH SIDEBAR */}
+        <Route element={<DashboardLayout />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/quickpractice" element={<QuickPractice />} />
+          <Route path="/progress" element={<Progress />} />
+          <Route path="/statistics" element={<Statistics />} />
+          <Route path="/achievements" element={<Achievements />} />
+          <Route path="/about" element={<About/>}></Route>
+          <Route path="/settings" element={<Settings/>}></Route>
+        </Route>
 
-        <Route
-          path="/dashboard"
-          element={
-            <Dashboard />
-          }
-        />
+
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
   );
