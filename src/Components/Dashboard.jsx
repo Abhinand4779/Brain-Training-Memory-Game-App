@@ -6,7 +6,7 @@ import "./Dashboard.css";
 export default function Dashboard() {
   return (
     <div className="dashboard-wrapper">
-      {/* <Sidebar /> */}
+
 
       <div className="dashboard-main">
         <Header />

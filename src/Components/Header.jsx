@@ -4,13 +4,12 @@ import "./Header.css";
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Example: replace with actual logged-in user email
   const userEmail = localStorage.getItem("userEmail") || "user@example.com";
   const firstLetter = userEmail.charAt(0).toUpperCase();
 
   const menuRef = useRef(null);
 
-  // Close menu when clicking outside
+
   useEffect(() => {
     function handleClickOutside(event) {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -23,16 +22,16 @@ export default function Header() {
 
   const handleSignOut = () => {
     localStorage.clear();
-    window.location.href = "/login"; // redirect to login page
+    window.location.href = "/login"; 
   };
 
   return (
     <div className="header-container">
-      {/* LEFT SECTION */}
+      
       <div className="header-left">
         <div className="logo-box">
           <img
-            src="https://cdn-icons-png.flaticon.com/512/9131/9131529.png"
+            src="src/assets/brainimg.png"
             alt="brain icon"
             className="logo-icon"
           />
@@ -43,7 +42,7 @@ export default function Header() {
         </div>
       </div>
 
-      {/* RIGHT SECTION */}
+    
       <div className="header-right">
         <div className="level-box">
           <span className="icon">🏅</span>
@@ -52,7 +51,7 @@ export default function Header() {
           <span className="points-text">0 pts</span>
         </div>
 
-        {/* PROFILE WITH DROPDOWN */}
+    
         <div className="profile-wrapper" ref={menuRef}>
           <div
             className="profile-circle"
@@ -62,7 +61,7 @@ export default function Header() {
           </div>
           <div className="online-dot"></div>
 
-          {/* DROPDOWN MENU */}
+      
           {menuOpen && (
             <div className="profile-menu">
               <p className="email-text">{userEmail}</p>
