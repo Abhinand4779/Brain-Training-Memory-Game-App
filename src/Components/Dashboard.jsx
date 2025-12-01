@@ -28,11 +28,11 @@ export default function Dashboard() {
           </p>
 
           <div className="game-list">
-            <div className="game-icon"></div>
-            <div className="game-icon"></div>
-            <div className="game-icon"></div>
-            <div className="game-icon"></div>
-            <div className="game-icon"></div>
+            <div className="game-icon">🃏</div>
+            <div className="game-icon">🔢</div>
+            <div className="game-icon">🎨</div>
+            <div className="game-icon">👤</div>
+            <div className="game-icon">📝</div>
           </div>
 
           <button className="start-btn">⚡ Start Daily Challenge →</button>
