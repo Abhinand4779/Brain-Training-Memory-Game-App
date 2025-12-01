@@ -42,7 +42,6 @@ export default function Header() {
         </div>
       </div>
 
-    
       <div className="header-right">
         <div className="level-box">
           <span className="icon">🏅</span>

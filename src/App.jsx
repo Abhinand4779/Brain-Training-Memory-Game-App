@@ -1,14 +1,11 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-
 import LoginPage from "./Pages/LoginPage";
 import Register from "./Pages/Register";
 import Welcome from "./Pages/Welcome";
 import DailyGoal from "./Pages/DailyGoal";
 import Focus from "./Pages/Focus";
-
 import DashboardLayout from "./Components/DashboardLayout";
-
 import Dashboard from "./Components/Dashboard";
 import QuickPractice from "./Pages/Quickpractice";
 import Progress from "./Pages/Progress";
