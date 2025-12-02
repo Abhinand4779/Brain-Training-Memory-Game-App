@@ -33,11 +33,11 @@ export default function Dashboard() {
         <p className="section-sub">Complete 5 games to maintain your streak and earn rewards.</p>
 
         <div className="games-row">
-          <div className="game-box"></div>
-          <div className="game-box"></div>
-          <div className="game-box"></div>
-          <div className="game-box"></div>
-          <div className="game-box"></div>
+          <div className="game-box">😊</div>
+          <div className="game-box">😁</div>
+          <div className="game-box">😃</div>
+          <div className="game-box">😛</div>
+          <div className="game-box">🙂</div>
         </div>
 
         <button className="start-btn">⚡ Start Daily Challenge →</button>
