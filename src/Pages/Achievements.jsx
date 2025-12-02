@@ -4,7 +4,7 @@ import React from 'react'
 const Achievements = () => {
   return (
     <div>
-       <h1>Achievements Page</h1>
+       <h1>Achievement Page</h1>
     </div>
   )
 }

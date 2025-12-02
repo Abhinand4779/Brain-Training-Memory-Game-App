@@ -26,7 +26,7 @@
 .menu-title {
   margin-top: 25px;
   margin-bottom: 10px;
-  font-size: 13px;
+  font-size: 15px;
   color: #666;
 }
 
@@ -39,6 +39,8 @@
   color: #333;
   display: block;
   transition: 0.2s;
+  font-size: 50px;
+ 
 }
 .menu-item.active {
   background: linear-gradient(90deg, #8a2be2, #d946ef);
