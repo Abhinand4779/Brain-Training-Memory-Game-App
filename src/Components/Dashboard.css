@@ -62,10 +62,31 @@
   margin: 15px 0;
 }
 
+.game-list {
+  display: flex;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.game-list > div {
+  background: #cad2f5;
+  padding: 15px;
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.game-list > div:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
 .game-icon {
   width: 160px;
   height: 150px;
-  background: #eaf1ff;
+  background: #acbdde;
   border-radius: 12px;
 }
 
