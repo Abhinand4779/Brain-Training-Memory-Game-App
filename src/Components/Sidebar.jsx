@@ -14,31 +14,31 @@ export default function Sidebar() {
 
         <p className="menu-title">MAIN MENU</p>
 
-        <NavLink to="/dashboard" className="menu-item">
+        <NavLink to="/dashboard" className="menu-itemi">
           Dashboard
         </NavLink>
 
-        <NavLink to="/quickpractice" className="menu-item">
+        <NavLink to="/quickpractice" className="menu-itemi">
           Quick Practice
         </NavLink>
 
-        <NavLink to="/progress" className="menu-item">
+        <NavLink to="/progress" className="menu-itemi">
           Progress
         </NavLink>
 
-        <NavLink to="/statistics" className="menu-item">
+        <NavLink to="/statistics" className="menu-itemi">
           Statistics
         </NavLink>
 
-        <NavLink to="/achievements" className="menu-item">
+        <NavLink to="/achievements" className="menu-itemi">
           Achievements
         </NavLink>
 
-        <NavLink to="/About" className="menu-item">
+        <NavLink to="/About" className="menu-itemi">
           About & Info
         </NavLink>
 
-        <NavLink to="/Settings" className="menu-item">
+        <NavLink to="/Settings" className="menu-itemi">
           Settings
         </NavLink>
       </div>

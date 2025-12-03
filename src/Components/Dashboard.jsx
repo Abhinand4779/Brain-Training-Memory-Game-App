@@ -4,8 +4,10 @@ import Header from "./Header"
 
 export default function Dashboard() {
   return (
+    <div>
+    <Header/>
     <div className="dashboard">
-      <Header/>
+      
       {/* Header Section */}
       <div className="top-header">
         
@@ -89,7 +91,7 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
-
+    </div>
     </div>
   );
 }

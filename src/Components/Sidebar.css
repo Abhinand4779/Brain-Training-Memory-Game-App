@@ -30,7 +30,8 @@
   color: #666;
 }
 
-.menu-item {
+
+.menu-itemi {
   padding: 12px;
   border-radius: 12px;
   margin-bottom: 8px;
@@ -39,10 +40,10 @@
   color: #333;
   display: block;
   transition: 0.2s;
-  font-size: 50px;
+  font-size: 20px;
  
 }
-.menu-item.active {
+.menu-itemi.active {
   background: linear-gradient(90deg, #8a2be2, #d946ef);
   color: #fff;
   font-weight: 600;
