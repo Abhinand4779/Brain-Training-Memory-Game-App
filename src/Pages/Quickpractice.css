@@ -13,12 +13,13 @@
 .qp-subtitle {
   color: gray;
   margin-bottom: 25px;
+  
 }
 
 .qp-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
+  gap: 53px;
 }
 
 .qp-card {
