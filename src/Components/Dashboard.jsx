@@ -90,7 +90,7 @@ export default function Dashboard() {
             <div className="activity-card">0 Achievements</div>
           </div>
         </div>
-      </div>
+      </div> 
     </div>
     </div>
   );
