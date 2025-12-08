@@ -11,7 +11,9 @@ const Settings = () => {
         <p>Detailed performance metrics</p>
       </div>
       <div>
-        
+        <img src="src/assets/brainimg.png" alt="" />
+        <h6>Profile</h6><br />
+        <p>Manage your account information</p>
       </div>
     </div>
   )

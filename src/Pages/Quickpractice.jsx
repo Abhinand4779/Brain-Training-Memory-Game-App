@@ -1,6 +1,7 @@
 import React from "react";
 import "./QuickPractice.css";
 import Header from "../Components/Header";
+import Dashboard from "../Components/Dashboard";
 
 export default function QuickPractice() {
   const games = [
@@ -44,7 +45,7 @@ export default function QuickPractice() {
   return (
     <div className="qp-container">
       <Header/>
-      {/* <button onClick={<Dashboard/>} className="back-btn">← Back</button> */}
+      <button onClick={<Dashboard/>} className="back-btn">← Back</button>
       
       <h2 className="qp-title">Quick Practice</h2>
       <p className="qp-subtitle">Choose a game to sharpen your skills</p>
