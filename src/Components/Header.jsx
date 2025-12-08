@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./Header.css";
+import LoginPage from "../Pages/LoginPage";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -64,7 +65,7 @@ export default function Header() {
           {menuOpen && (
             <div className="profile-menu">
               <p className="email-text">{userEmail}</p>
-              <button className="menu-item">Settings</button>
+              <button className="menu-item" onClick={<LoginPage/>}>Settings</button>
               <button className="menu-item" onClick={handleSignOut}>
                 Sign Out
               </button>

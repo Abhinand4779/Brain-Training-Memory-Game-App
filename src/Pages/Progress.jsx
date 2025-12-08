@@ -47,7 +47,7 @@ export default function Progress() {
 
         {/* Trend + Games Row */}
         <div className="bottom-row">
-          <div className="trend-card">
+          <div className="trend-card"> 
             <h4>📈 7-Day Performance Trend</h4>
             <div className="empty-section">
               <span className="empty-icon">📉</span>
@@ -85,7 +85,7 @@ export default function Progress() {
             <span>2000 pts</span>
           </div>
         </div>
+        </div>
       </div>
-    </div>
   );
 }

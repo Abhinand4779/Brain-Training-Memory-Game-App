@@ -5,7 +5,14 @@ const Settings = () => {
   return (
     <div>
       <Header/>
-      <h1>Settings page</h1>
+      <div>
+        <button>Back</button>
+        <h2>Statitics</h2>
+        <p>Detailed performance metrics</p>
+      </div>
+      <div>
+        
+      </div>
     </div>
   )
 }
