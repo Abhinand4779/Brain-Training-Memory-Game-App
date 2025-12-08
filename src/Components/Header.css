@@ -11,12 +11,10 @@
   top: 0;
 }
 
-
 .header-left {
   display: flex;
   align-items: center;
 }
-
 
 .logo-box {
   background: linear-gradient(135deg, #a200ff, #5a00ff);

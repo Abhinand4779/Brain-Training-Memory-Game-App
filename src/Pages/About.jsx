@@ -3,7 +3,7 @@ import Header from '../Components/Header'
 
 const About = () => {
   return (
-    <div>
+    <div className=''>
       <Header />
       <div>
         <button>Back</button>
