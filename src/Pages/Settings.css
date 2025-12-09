@@ -1,0 +1,212 @@
+.settings-wrapper {
+  padding: 25px;
+  background: #f5f7ff;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+/* HEADER */
+.settings-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.back-icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.settings-header h2 {
+  font-size: 22px;
+}
+
+/* GRID LAYOUT */
+.settings-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.06);
+}
+
+.sub-text {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.label {
+  font-size: 14px;
+  margin-top: 10px;
+  display: block;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+/* PROFILE INFO BOX */
+.info-box {
+  margin-top: 15px;
+  display: flex;
+  gap: 12px;
+  background: #f0e5ff;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.user-initial {
+  background: #7a48ff;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/* GOAL BUTTONS */
+.goal-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.goal-btn {
+  flex: 1;
+  padding: 10px 0;
+  background: #f2f2f2;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.goal-btn.active {
+  background: #7b2fff;
+  color: white;
+}
+
+/* OPTIONS BOXES */
+.option-box {
+  background: #f7f7f7;
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.option-box.selected {
+  border: 2px solid #7b2fff;
+  background: #f2e6ff;
+}
+
+.option-desc {
+  font-size: 13px;
+  color: #666;
+}
+
+/* DROPDOWN */
+.dropdown {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #cfcfcf;
+  margin-top: 5px;
+}
+
+/* TOGGLE SWITCH */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 24px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background: #ccc;
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background: #7b2fff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(21px);
+}
+
+/* FOCUS CARDS */
+.focus-card {
+  padding: 15px;
+  border-radius: 12px;
+  margin-top: 12px;
+  cursor: pointer;
+  border: 1px solid #dddddd;
+}
+
+.focus-card.active {
+  border: 2px solid #7b2fff;
+  background: #f3e7ff;
+}
+
+.memory { border-left: 5px solid #ff8d70; }
+.attention { border-left: 5px solid #ffa534; }
+.problem { border-left: 5px solid #ffda49; }
+
+/* FOOTER BUTTONS */
+.footer-controls {
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.cancel-btn {
+  padding: 10px 20px;
+  background: #e2e2e2;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.save-btn {
+  padding: 10px 22px;
+  background: #7b2fff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}

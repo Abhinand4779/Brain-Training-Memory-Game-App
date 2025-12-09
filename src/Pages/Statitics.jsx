@@ -6,23 +6,23 @@ import Header from "../Components/Header";
 
 const StatsDashboard = () => {
   const stats = {
-    totalTime: "0m",
-    avgAccuracy: "0%",
-    perfectGames: 0,
-    bestStreak: 0,
-    gameTypes: [
-      { name: "Card Matching", played: 0, avg: "0%" },
-      { name: "Number Sequence", played: 0, avg: "0%" },
-      { name: "Pattern Recognition", played: 0, avg: "0%" },
-      { name: "Name & Face", played: 0, avg: "0%" },
-      { name: "Word List", played: 0, avg: "0%" },
-    ],
-    noGamesPlayed: true,
+  totalTime: "0m",
+  avgAccuracy: "0%",
+  perfectGames: 0,
+  bestStreak: 0,
+  gameTypes: [
+    { name: "Card Matching", played: 0, avg: "0%" },
+    { name: "Number Sequence", played: 0, avg: "0%" },
+    { name: "Pattern Recognition", played: 0, avg: "0%" },
+    { name: "Name & Face", played: 0, avg: "0%" },
+    { name: "Word List", played: 0, avg: "0%" },
+  ],
+  noGamesPlayed: true,
 
-  };
+};
   return (
     <div className="stats-dashboard">
-      <Header />
+      <Header/>
       <header className="stats-header">
         <h2>Statitics</h2><br />
         <p>Detailed performance metrics</p>

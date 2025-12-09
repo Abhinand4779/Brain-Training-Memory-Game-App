@@ -1,0 +1,128 @@
+/* PAGE WRAPPER */
+.achievements-wrapper {
+  width: 100%;
+  padding: 25px;
+  background: #f4f6ff;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+/* HEADER */
+.achievements-header {
+  margin-bottom: 25px;
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.sub-text {
+  font-size: 14px;
+  margin-top: -5px;
+  color: #777;
+}
+
+/* SUMMARY CARD */
+.summary-card {
+  width: 100%;
+  background: #fff7e5;
+  padding: 22px;
+  border-radius: 12px;
+  margin-bottom: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #f5e1b5;
+}
+
+.summary-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.trophy-icon {
+  font-size: 40px;
+}
+
+.summary-right {
+  text-align: right;
+}
+
+.progress-bar {
+  width: 160px;
+  height: 7px;
+  background: #ffe8c8;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: orange;
+  border-radius: 10px;
+}
+
+.progress-percent {
+  font-size: 13px;
+  margin-left: 5px;
+}
+
+/* SECTIONS */
+.section-title {
+  margin: 20px 0 12px;
+  font-size: 18px;
+}
+
+/* ACHIEVEMENT CARDS */
+.achievement-card {
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  border: 1px solid #eee;
+  margin-bottom: 15px;
+  transition: 0.2s ease;
+}
+
+.achievement-card.locked {
+  opacity: 0.6;
+}
+
+.icon-area {
+  font-size: 28px;
+}
+
+/* GRID FOR SPECIAL ACHIEVEMENTS */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 15px;
+}
+
+.desc {
+  font-size: 14px;
+  margin-top: -2px;
+}
+
+.tip {
+  font-size: 12px;
+  color: #777;
+  margin-top: 4px;
+}
+
+/* HOVER */
+.achievement-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
+}
