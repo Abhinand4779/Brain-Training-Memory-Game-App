@@ -53,6 +53,7 @@ export default function BrainTraining() {
             to make brain training effective and engaging.
           </p>
         </div>
+        
 
         {/* Who Is This For + Benefits */}
         <div className="two-columns">
