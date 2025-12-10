@@ -4,11 +4,9 @@ import "./Welcome.css";
 
 export default function Welcome() {
   const navigate = useNavigate();   
-
   const handleStart = () => {
     navigate("/dailygoal");         
   };
-
   return (
     <div className="welcome-container">
       <div className="welcomes-card">
@@ -16,14 +14,11 @@ export default function Welcome() {
         <div className="logo">
           <img src="src/assets/brainimg.png" alt="" />
         </div>
-
         <h2>Welcome to Brain Training</h2>
-
         <p className="subtitle">
           Train your mind with fun, scientifically-backed exercises designed to 
           improve memory, focus, and cognitive abilities.
         </p>
-
         <div className="info-box">
           <p>
             Our program is based on cognitive neuroscience research and proven techniques.
@@ -31,32 +26,26 @@ export default function Welcome() {
             measurable improvements in mental performance.
           </p>
         </div>
-
         <div className="features">
           <div className="feature-card">
             <div className="icon">🎯</div>
             <h4>Daily Challenges</h4>
             <p>5 scientifically-designed games that adapt to your skill level</p>
           </div>
-
           <div className="feature-card">
             <div className="icon">⚡</div>
             <h4>Track Progress</h4>
             <p>Monitor brain age, accuracy, and cognitive improvements</p>
           </div>
-
           <div className="feature-card">
             <div className="icon">🔥</div>
             <h4>Build Streaks</h4>
             <p>Daily habit building with rewards</p>
           </div>
         </div>
-
-        
         <button className="get-started-btn" onClick={handleStart}>
           Get Started
         </button>
-
       </div>
     </div>
   );

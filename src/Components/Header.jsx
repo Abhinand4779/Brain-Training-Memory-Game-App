@@ -4,13 +4,9 @@ import LoginPage from "../Pages/LoginPage";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-
   const userEmail = localStorage.getItem("userEmail") || "user@example.com";
   const firstLetter = userEmail.charAt(0).toUpperCase();
-
   const menuRef = useRef(null);
-
-
   useEffect(() => {
     function handleClickOutside(event) {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -20,15 +16,12 @@ export default function Header() {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
-
   const handleSignOut = () => {
     localStorage.clear();
     window.location.href = "/login";
   };
-
   return (
     <div className="header-container">
-
       <div className="header-left">
         <div className="logo-box">
           <img
@@ -42,7 +35,6 @@ export default function Header() {
           <p>Elevate your mind</p>
         </div>
       </div>
-
       <div className="header-right">
         <div className="level-box">
           <span className="icon">🏅</span>
@@ -50,8 +42,6 @@ export default function Header() {
           <span className="divider"></span>
           <span className="points-text">0 pts</span>
         </div>
-
-
         <div className="profile-wrapper" ref={menuRef}>
           <div
             className="profile-circle"
@@ -60,8 +50,6 @@ export default function Header() {
             {firstLetter}
           </div>
           <div className="online-dot"></div>
-
-
           {menuOpen && (
             <div className="profile-menu">
               <p className="email-text">{userEmail}</p>

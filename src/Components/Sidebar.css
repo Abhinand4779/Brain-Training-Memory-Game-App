@@ -4,7 +4,6 @@
   background: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   border-right: 1px solid #eee;
   overflow: hidden;
  
@@ -53,10 +52,11 @@
 }
 
 .sidebar-footer {
-  background: #f8faff;
+   background: #f8faff;
   padding: 15px 10px;
   text-align: center;
   border-top: 1px solid #eee;
+  flex-shrink: 0; 
 }
 
 .sidebar-footer p {

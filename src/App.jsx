@@ -16,7 +16,6 @@ import Settings from "./Pages/Settings";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
-
   return (
     <Router>
       <Routes>
@@ -53,8 +52,6 @@ function App() {
           <Route path="/about" element={<About/>}></Route>
           <Route path="/settings" element={<Settings/>}></Route>
         </Route>
-
-
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>

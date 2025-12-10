@@ -56,12 +56,10 @@ const LoginPage = ({ setLo }) => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-
           <button type="submit" className="signin-btn">
             Sign In
           </button>
         </form>
-
         <p className="register-text">
           Don’t have an account?{" "}
           <Link to="/register">Create one for free</Link>

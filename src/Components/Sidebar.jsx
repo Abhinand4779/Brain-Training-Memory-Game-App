@@ -5,13 +5,11 @@ import "./Sidebar.css";
 export default function Sidebar() {
   return (
     <div className="sidebar">
-
       <div className="sidebar-scroll">
         <div className="streak-card">
           <h2>0</h2>
           <p>Day Streak</p>
         </div>
-
         <p className="menu-title">MAIN MENU</p>
 
         <NavLink to="/dashboard" className="menu-itemi">
@@ -42,7 +40,6 @@ export default function Sidebar() {
           Settings
         </NavLink>
       </div>
-
       <div className="sidebar-footer">
         <p>Brain Training App</p>
         <span>Version 1.0</span>

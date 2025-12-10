@@ -118,7 +118,6 @@ export default function Settings() {
         <div className="card">
           <h3>Focus Areas</h3>
           <p className="sub-texte">Select cognitive skills you want to improve</p>
-
           <div
             className={`focus-card memory ${focus === "Memory" ? "active" : ""}`}
             onClick={() => setFocus("Memory")}
@@ -126,7 +125,6 @@ export default function Settings() {
             <h4>Memory</h4>
             <p>Recall & retention skills</p>
           </div>
-
           <div
             className={`focus-card attention ${focus === "Attention" ? "active" : ""}`}
             onClick={() => setFocus("Attention")}
@@ -134,7 +132,6 @@ export default function Settings() {
             <h4>Attention</h4>
             <p>Focus and concentration</p>
           </div>
-
           <div
             className={`focus-card problem ${focus === "Problem Solving" ? "active" : ""}`}
             onClick={() => setFocus("Problem Solving")}
@@ -144,7 +141,6 @@ export default function Settings() {
           </div>
         </div>
       </div>
-
       {/* FOOTER BUTTONS */}
       <div className="footer-controls">
         <button className="cancel-btn">Cancel</button>

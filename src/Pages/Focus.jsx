@@ -11,7 +11,6 @@ const Focus = () => {
             prev.includes(option) ? prev.filter((o) => o !== option) : [...prev, option]
         );
     };
-
     return (
         <div className="focus-container">
             <h2>Choose Your Focus Areas</h2>
@@ -59,5 +58,4 @@ const Focus = () => {
         </div>
     );
 };
-
 export default Focus;

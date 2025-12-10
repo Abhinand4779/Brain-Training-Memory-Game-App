@@ -41,15 +41,12 @@ export default function QuickPractice() {
       color: "pink",
     },
   ];
-
   return (
     <div className="qp-container">
       <Header/>
-      <button onClick={<Dashboard/>} className="back-btn">← Back</button>
-      
+      <button onClick={<Dashboard/>} className="back-btn">← Back</button>      
       <h2 className="qp-title">Quick Practice</h2>
       <p className="qp-subtitle">Choose a game to sharpen your skills</p>
-
       <div className="qp-grid">
         {games.map((g, i) => (
           <div key={i} className={`qp-card ${g.color}`}>
@@ -65,7 +62,6 @@ export default function QuickPractice() {
           </div>
         ))}
       </div>
-
       <div className="qp-bottom">
         <div className="qp-tips">
           <h4>Practice Tips</h4>
@@ -75,7 +71,6 @@ export default function QuickPractice() {
             <li>Mix different game types to build overall cognitive fitness.</li>
           </ul>
         </div>
-
         <div className="qp-facts">
           <h4>Did You Know?</h4>
           <ul>

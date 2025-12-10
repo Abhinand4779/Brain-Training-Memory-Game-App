@@ -79,20 +79,16 @@ export default function BrainTraining() {
               <li><b>Problem Solving:</b> Develop analytical thinking ability</li>
             </ul>
           </div>
-
         </div>
 
         {/* How It Works */}
         <h3 className="how-title">🔍 How It Works</h3>
-
         <div className="three-steps">
-
           <div className="step-card yellow-light">
             <h2>1</h2>
             <h4>Daily Practice</h4>
             <p>Complete 5–15 min curated brain exercises each day.</p>
           </div>
-
           <div className="step-card yellow-light">
             <h2>2</h2>
             <h4>Adaptive Difficulty</h4>
@@ -101,7 +97,6 @@ export default function BrainTraining() {
               keep you challenged.
             </p>
           </div>
-
           <div className="step-card yellow-light">
             <h2>3</h2>
             <h4>Track Progress</h4>
@@ -109,9 +104,7 @@ export default function BrainTraining() {
               Monitor improvements with detailed metrics & visual stats.
             </p>
           </div>
-
         </div>
-
       </div>
     </div>
   );

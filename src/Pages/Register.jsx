@@ -31,11 +31,8 @@ const Register = () => {
         <div className="logo">
           <img src="src/assets/brainimg.png" alt="Brain Logo" />
         </div>
-
         <h4>Create Account</h4>
-
-        <form onSubmit={handleSubmit}>
-          
+        <form onSubmit={handleSubmit}>          
           <label>Full Name</label>
           <div className="input-group">
             <input
@@ -46,7 +43,6 @@ const Register = () => {
               onChange={(e) => setName(e.target.value)}
             />
           </div>
-
           <label>Email Address</label>
           <div className="input-group">
             <input
@@ -57,7 +53,6 @@ const Register = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-
           <label>Password</label>
           <div className="input-group">
             <input
@@ -68,7 +63,6 @@ const Register = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-
           <label>Re-enter Password</label>
           <div className="input-group">
             <input
@@ -79,12 +73,10 @@ const Register = () => {
               onChange={(e) => setRepassword(e.target.value)}
             />
           </div>
-
           <button type="submit" className="signin-btn">
             Register
           </button>
         </form>
-
         <p className="register-text">
           Already have an account? <Link to="/">Sign in</Link>
         </p>

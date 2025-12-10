@@ -17,7 +17,6 @@ export default function DailyGoal() {
       <div className="goal-card">
         <h2 className="main-h">Set Your Daily Goal</h2>
         <p className="subtitle">How much time do you want to spend each day?</p>
-
         <div className="options">
           {[5, 10, 15].map((time) => (
             <div
@@ -30,7 +29,6 @@ export default function DailyGoal() {
             </div>
           ))}
         </div>
-
         <div className="buttons">
           <button className="back-btn" onClick={() => navigate("/welcome")}>
             Back

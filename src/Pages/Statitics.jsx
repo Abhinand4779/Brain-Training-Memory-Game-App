@@ -2,8 +2,6 @@ import React from "react";
 import "./Statitics.css";
 import Header from "../Components/Header";
 
-
-
 const StatsDashboard = () => {
   const stats = {
   totalTime: "0m",
@@ -18,7 +16,6 @@ const StatsDashboard = () => {
     { name: "Word List", played: 0, avg: "0%" },
   ],
   noGamesPlayed: true,
-
 };
   return (
     <div className="stats-dashboard">
@@ -27,7 +24,6 @@ const StatsDashboard = () => {
         <h2>Statitics</h2><br />
         <p>Detailed performance metrics</p>
       </header>
-
       <section className="overview-cards">
         <div className="cards">
           <div className="card-title">Total Time</div>
@@ -50,7 +46,6 @@ const StatsDashboard = () => {
           <div className="card-subtext">Days in a row</div>
         </div>
       </section>
-
       <section className="game-type-section">
         <h3>Performance by Game Type</h3>
         <div className="game-type-list">
@@ -67,7 +62,6 @@ const StatsDashboard = () => {
           ))}
         </div>
       </section>
-
       {stats.noGamesPlayed && (
         <div className="no-games">
           No games played yet
@@ -76,5 +70,4 @@ const StatsDashboard = () => {
     </div>
   );
 };
-
 export default StatsDashboard;

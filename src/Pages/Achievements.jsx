@@ -26,7 +26,6 @@ export default function Achievements() {
             <p>Achievements Unlocked</p>
           </div>
         </div>
-
         <div className="summary-right">
           <p>Completion Progress</p>
           <div className="progress-bar">
