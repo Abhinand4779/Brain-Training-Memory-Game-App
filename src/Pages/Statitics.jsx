@@ -29,22 +29,22 @@ const StatsDashboard = () => {
       </header>
 
       <section className="overview-cards">
-        <div className="card">
+        <div className="cards">
           <div className="card-title">Total Time</div>
           <div className="card-value">{stats.totalTime}</div>
           <div className="card-subtext">Training time</div>
         </div>
-        <div className="card">
+        <div className="cards">
           <div className="card-title">Avg Accuracy</div>
           <div className="card-value">{stats.avgAccuracy}</div>
           <div className="card-subtext">Overall performance</div>
         </div>
-        <div className="card">
+        <div className="cards">
           <div className="card-title">Perfect Games</div>
           <div className="card-value">{stats.perfectGames}</div>
           <div className="card-subtext">100% accuracy</div>
         </div>
-        <div className="card">
+        <div className="cards">
           <div className="card-title">Best Streak</div>
           <div className="card-value">{stats.bestStreak}</div>
           <div className="card-subtext">Days in a row</div>

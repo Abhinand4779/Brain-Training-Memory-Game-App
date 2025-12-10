@@ -14,7 +14,7 @@ export default function Achievements() {
           Back
         </button>
         <h2>Achievements</h2>
-        <p className="sub-text">Your brain training milestones</p>
+        <p className="sub-texti">Your brain training milestones</p>
       </div>
 
       {/* Summary Card */}
@@ -43,7 +43,7 @@ export default function Achievements() {
         <div className="icon-area">🔥</div>
         <div>
           <h4>Streak Warrior</h4>
-          <p className="desc">Maintain a 30-day streak</p>
+          <p className="desci">Maintain a 30-day streak</p>
           <p className="tip">Keep training to unlock this achievement</p>
         </div>
       </div>
@@ -57,7 +57,7 @@ export default function Achievements() {
           <div className="icon-area">🎯</div>
           <div>
             <h4>First Week Complete</h4>
-            <p className="desc">Maintain a 7-day streak</p>
+            <p className="desci">Maintain a 7-day streak</p>
             <p className="tip">Keep training to unlock this achievement</p>
           </div>
         </div>
@@ -66,7 +66,7 @@ export default function Achievements() {
           <div className="icon-area">🧠</div>
           <div>
             <h4>Memory Master</h4>
-            <p className="desc">Perfect score in card matching game</p>
+            <p className="desci">Perfect score in card matching game</p>
             <p className="tip">Keep training to unlock this achievement</p>
           </div>
         </div>
@@ -75,7 +75,7 @@ export default function Achievements() {
           <div className="icon-area">⚡</div>
           <div>
             <h4>Speed Demon</h4>
-            <p className="desc">Complete a perfect game in under 30 seconds</p>
+            <p className="desci">Complete a perfect game in under 30 seconds</p>
             <p className="tip">Keep training to unlock this achievement</p>
           </div>
         </div>
@@ -84,7 +84,7 @@ export default function Achievements() {
           <div className="icon-area">🏋️</div>
           <div>
             <h4>Brain Athlete</h4>
-            <p className="desc">Play 100 games</p>
+            <p className="desci">Play 100 games</p>
             <p className="tip">Keep training to unlock this achievement</p>
           </div>
         </div>
@@ -93,7 +93,7 @@ export default function Achievements() {
           <div className="icon-area">✨</div>
           <div>
             <h4>Perfectionist</h4>
-            <p className="desc">Achieve 10 perfect scores</p>
+            <p className="desci">Achieve 10 perfect scores</p>
             <p className="tip">Keep training to unlock this achievement</p>
           </div>
         </div>

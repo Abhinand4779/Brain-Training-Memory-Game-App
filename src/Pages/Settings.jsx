@@ -26,7 +26,7 @@ export default function Settings() {
         {/* PROFILE */}
         <div className="card">
           <h3>Profile</h3>
-          <p className="sub-text">Manage your account information</p>
+          <p className="sub-texte">Manage your account information</p>
 
           <label className="label">Full Name</label>
           <input type="text" placeholder="op" className="input" />
@@ -34,7 +34,7 @@ export default function Settings() {
           <label className="label">Email Address</label>
           <input type="email" placeholder="op@gmail.com" className="input" />
 
-          <div className="info-box">
+          <div className="info-boxy">
             <span className="user-initial">O</span>
             <div>
               <h4>op</h4>
@@ -46,7 +46,7 @@ export default function Settings() {
         {/* TRAINING SETTINGS */}
         <div className="card">
           <h3>Training</h3>
-          <p className="sub-text">Customize your training experience</p>
+          <p className="sub-texte">Customize your training experience</p>
 
           <label className="label">Daily Goal (minutes)</label>
           <div className="goal-buttons">
@@ -68,7 +68,7 @@ export default function Settings() {
             onClick={() => setDifficultyMode("adaptive")}
           >
             Adaptive (Recommended)
-            <p className="option-desc">Difficulty adjusts based on your performance</p>
+            <p className="option-descw">Difficulty adjusts based on your performance</p>
           </div>
 
           <div
@@ -76,7 +76,7 @@ export default function Settings() {
             onClick={() => setDifficultyMode("manual")}
           >
             Manual
-            <p className="option-desc">Set your own difficulty level</p>
+            <p className="option-descw">Set your own difficulty level</p>
           </div>
 
           {difficultyMode === "manual" && (
@@ -99,7 +99,7 @@ export default function Settings() {
         {/* PREFERENCES */}
         <div className="card">
           <h3>Preferences</h3>
-          <p className="sub-text">Audio and notification settings</p>
+          <p className="sub-texte">Audio and notification settings</p>
 
           <div className="toggle-row">
             <span>Sound Effects</span>
@@ -117,7 +117,7 @@ export default function Settings() {
         {/* FOCUS AREAS */}
         <div className="card">
           <h3>Focus Areas</h3>
-          <p className="sub-text">Select cognitive skills you want to improve</p>
+          <p className="sub-texte">Select cognitive skills you want to improve</p>
 
           <div
             className={`focus-card memory ${focus === "Memory" ? "active" : ""}`}

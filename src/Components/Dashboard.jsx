@@ -14,7 +14,7 @@ export default function Dashboard() {
         <div>
           <p className="date-text">Tuesday, December 2, 2025</p>
           <h2 className="welcome">Welcome Back! 👋</h2>
-          <p className="sub-text">Ready to train your brain today?</p>
+          <p className="sub-texts">Ready to train your brain today?</p>
         </div>
 
         <div className="stats-box">

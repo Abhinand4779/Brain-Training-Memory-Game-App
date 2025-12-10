@@ -7,35 +7,35 @@ export default function QuickPractice() {
   const games = [
     {
       title: "Card Matching",
-      desc: "Classic memory game that trains visual memory and concentration",
+      desce: "Classic memory game that trains visual memory and concentration",
       time: "5–7 min",
       skills: ["Visual Memory", "Concentration"],
       color: "purple",
     },
     {
       title: "Number Sequence",
-      desc: "Remember and repeat increasingly complex number sequences",
+      desce: "Remember and repeat increasingly complex number sequences",
       time: "3–6 min",
       skills: ["Working Memory", "Processing Speed"],
       color: "blue",
     },
     {
       title: "Pattern Recognition",
-      desc: "Memorize and recreate visual patterns on a grid",
+      desce: "Memorize and recreate visual patterns on a grid",
       time: "4–6 min",
       skills: ["Spatial Memory", "Visual Processing"],
       color: "green",
     },
     {
       title: "Name & Face Memory",
-      desc: "Associate names with faces to improve social memory",
+      desce: "Associate names with faces to improve social memory",
       time: "6–8 min",
       skills: ["Social Memory", "Associative Learning"],
       color: "orange",
     },
     {
       title: "Word List Recall",
-      desc: "Memorize and recall lists of words using memory strategies",
+      desce: "Memorize and recall lists of words using memory strategies",
       time: "5–7 min",
       skills: ["Verbal Memory", "Encoding Strategies"],
       color: "pink",
@@ -54,7 +54,7 @@ export default function QuickPractice() {
         {games.map((g, i) => (
           <div key={i} className={`qp-card ${g.color}`}>
             <h3>{g.title}</h3>
-            <p className="qp-desc">{g.desc}</p>
+            <p className="qp-desce">{g.desce}</p>
             <p className="qp-time">⏱ {g.time}</p>
             <div className="qp-skills">
               {g.skills.map((s, idx) => (

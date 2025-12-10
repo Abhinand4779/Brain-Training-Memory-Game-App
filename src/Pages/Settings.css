@@ -36,7 +36,7 @@
   box-shadow: 0 0 10px rgba(0,0,0,0.06);
 }
 
-.sub-text {
+.sub-texte {
   font-size: 14px;
   color: #777;
   margin-bottom: 15px;
@@ -58,7 +58,7 @@
 }
 
 /* PROFILE INFO BOX */
-.info-box {
+.y {
   margin-top: 15px;
   display: flex;
   gap: 12px;
@@ -110,7 +110,7 @@
   background: #f2e6ff;
 }
 
-.option-desc {
+.option-descw {
   font-size: 13px;
   color: #666;
 }
