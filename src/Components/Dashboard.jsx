@@ -1,9 +1,11 @@
 import React from "react";
 import "./Dashboard.css";
-import Header from "./Header"
-import { Navigate} from "react-router-dom";
+import Header from "./Header";
+import { useNavigate } from "react-router-dom";
 
 export default function Dashboard() {
+
+  const navigate = useNavigate();   // <-- FIX
 
   const today = new Date();
   const formattedDate = today.toLocaleDateString("en-US", {
@@ -14,7 +16,7 @@ export default function Dashboard() {
   });
 
   function handleStartChallenge() {
-    Navigate("/daily-challenge");  // <-- your next page route
+    navigate("/game");  // <-- FIXED
   }
 
   return (
@@ -56,7 +58,7 @@ export default function Dashboard() {
             <div className="game-box">🙂</div>
           </div>
 
-         <button className="start-btn" onClick={handleStartChallenge}>
+          <button className="start-btn" onClick={handleStartChallenge}>
             ⚡ Start Daily Challenge →
           </button>
 
@@ -64,19 +66,15 @@ export default function Dashboard() {
 
         {/* Right Section */}
         <div className="right-section">
-          {/* Current Level */}
           <div className="level-card">
             <h3>Current Level</h3>
             <p className="level-num">Level 1</p>
-
             <div className="progress">
               <div className="progress-fill"></div>
             </div>
-
             <p className="points">0 / 2000 pts</p>
           </div>
 
-          {/* Quick Stats */}
           <div className="quick-stats">
             <h3>Quick Stats</h3>
             <p>Games Played: 0</p>
@@ -85,9 +83,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* Bottom Section */}
         <div className="bottom-wrapper">
-          {/* Achievements */}
           <div className="achievements">
             <h3>Recent Achievements</h3>
             <div className="no-achievements">
@@ -96,7 +92,6 @@ export default function Dashboard() {
             </div>
           </div>
 
-          {/* Activity Summary */}
           <div className="activity">
             <h3>Activity Summary</h3>
             <p className="week">This Week</p>
@@ -108,6 +103,7 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
+
       </div>
     </div>
   );

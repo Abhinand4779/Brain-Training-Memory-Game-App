@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate, BrowserRouter } from "react-router-dom";
 import LoginPage from "./Pages/LoginPage";
 import Register from "./Pages/Register";
 import Welcome from "./Pages/Welcome";
@@ -13,6 +13,7 @@ import Statistics from "./Pages/Statitics";
 import Achievements from "./Pages/Achievements";
 import About from "./Pages/About";
 import Settings from "./Pages/Settings";
+import Games from "./Pages/Games"
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -52,6 +53,7 @@ function App() {
           <Route path="/about" element={<About/>}></Route>
           <Route path="/settings" element={<Settings/>}></Route>
         </Route>
+        <Route path="/game" element={<Games/>} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>

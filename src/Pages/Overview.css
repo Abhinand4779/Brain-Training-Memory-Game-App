@@ -1,0 +1,24 @@
+.section-card {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.section-title {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.two-columns {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.col-title {
+  margin-bottom: 10px;
+}

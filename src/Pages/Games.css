@@ -1,0 +1,50 @@
+.memory-wrapper {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 12px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: #dddddd;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.box:hover {
+  transform: scale(1.05);
+}
+
+.highlight {
+  background: #00bfff; /* blue highlight */
+}
+
+.selected {
+  background: #8bc34a; /* green when user selects */
+}
+
+.start-btn {
+  padding: 10px 25px;
+  background: #6a5acd;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.message {
+  font-size: 20px;
+  margin-top: 15px;
+  font-weight: bold;
+}
