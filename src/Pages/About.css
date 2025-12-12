@@ -56,20 +56,7 @@
 }
 
 /* SECTION CARD */
-.section-card {
-  background: white;
-  padding: 22px;
-  border-radius: 12px;
-  margin-bottom: 25px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
 
-.section-title {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  margin-bottom: 10px;
-}
 
 .icon {
   font-size: 20px;
@@ -83,11 +70,6 @@
 }
 
 /* TWO COLUMN BOXES */
-.two-columns {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 30px;
-}
 
 .two-col-card {
   flex: 1;
@@ -107,9 +89,6 @@
   background: #f2fff6;
 }
 
-.col-title {
-  margin-bottom: 10px;
-}
 
 .two-col-card ul {
   list-style: none;

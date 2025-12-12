@@ -3,7 +3,7 @@ import "./About.css";
 import Header from "../Components/Header";
 import Overview from "./Overview";
 import Science from "./Science";
-import Games from "./Games";
+import Games from "./Diffgames";
 import Faq from "./Faq";
 
 export default function BrainTraining() {
