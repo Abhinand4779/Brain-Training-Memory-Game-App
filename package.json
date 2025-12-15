@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "bootstrap": "^5.3.8",
+    "lucide-react": "^0.561.0",
     "react": "^19.1.1",
     "react-bootstrap": "^2.10.10",
     "react-dom": "^19.1.1",

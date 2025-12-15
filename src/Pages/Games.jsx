@@ -7,8 +7,6 @@ export default function MemoryGrid() {
   const [isShowing, setIsShowing] = useState(true);
   const [message, setMessage] = useState("");
   const [round, setRound] = useState(1);
-
-  // 🟦 Generate N random boxes (N increases each round)
   const generateRandomBoxes = (count) => {
     let nums = [];
     while (nums.length < count) {
@@ -17,10 +15,8 @@ export default function MemoryGrid() {
     }
     return nums;
   };
-
-  // 🟧 Start a new round
   const startRound = () => {
-    const random = generateRandomBoxes(round + 2); // round 1 = 3 boxes, round 2 = 4 boxes ...
+    const random = generateRandomBoxes(round + 2); 
     setHighlightedBoxes(random);
     setUserSelection([]);
     setIsShowing(true);
@@ -33,9 +29,9 @@ export default function MemoryGrid() {
 
   useEffect(() => {
     startRound();
-  }, [round]);
+  }, [round ]);
 
-  // 🟩 When user clicks a box
+ 
   const handleSelect = (index) => {
     if (isShowing) return;
 
@@ -44,13 +40,13 @@ export default function MemoryGrid() {
     const newSelection = [...userSelection, index];
     setUserSelection(newSelection);
 
-    // User finished selecting
+   
     if (newSelection.length === highlightedBoxes.length) {
       checkResult(newSelection);
     }
   };
 
-  // 🟥 Check if user selected correctly
+ 
   const checkResult = (selection) => {
     const correct =
       selection.sort().join(",") === highlightedBoxes.sort().join(",");
@@ -64,7 +60,7 @@ export default function MemoryGrid() {
       }
     } else {
       setMessage("❌ Wrong Pattern! Game Over. Restarting...");
-      setTimeout(() => setRound(1), 1500);
+      setTimeout(() => setRound(1), 1000);
     }
   };
 

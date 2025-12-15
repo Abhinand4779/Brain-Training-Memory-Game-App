@@ -5,21 +5,15 @@ import Register from "./Register";
 
 const LoginPage = ({ setLo }) => {
   const navigate = useNavigate();
-
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
   const handleLogin = (e) => {
     e.preventDefault();
-
     const savedUser = JSON.parse(localStorage.getItem("user"));
-
     if (!savedUser) {
       alert("No user found! Please register first.");
       return;
     }
-
     if (email === savedUser.email && password === savedUser.password) {
       setLo(true);
       navigate("/welcome");
@@ -65,7 +59,10 @@ const LoginPage = ({ setLo }) => {
           <Link to="/register">Create one for free</Link>
         </p>
       </div>
+      
+      
     </div>
   );
 };
 export default LoginPage;
+    

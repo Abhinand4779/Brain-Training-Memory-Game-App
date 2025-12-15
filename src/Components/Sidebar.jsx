@@ -5,11 +5,17 @@ import "./Sidebar.css";
 export default function Sidebar() {
   return (
     <div className="sidebar">
-      <div className="sidebar-scroll">
+
+      {/* FIXED TOP */}
+      <div className="sidebar-top">
         <div className="streak-card">
           <h2>0</h2>
           <p>Day Streak</p>
         </div>
+      </div>
+
+      {/* SCROLLABLE MENU */}
+      <div className="sidebar-menu">
         <p className="menu-title">MAIN MENU</p>
 
         <NavLink to="/dashboard" className="menu-itemi">
@@ -32,18 +38,21 @@ export default function Sidebar() {
           Achievements
         </NavLink>
 
-        <NavLink to="/About" className="menu-itemi">
+        <NavLink to="/about" className="menu-itemi">
           About & Info
         </NavLink>
 
-        <NavLink to="/Settings" className="menu-itemi">
+        <NavLink to="/settings" className="menu-itemi">
           Settings
         </NavLink>
       </div>
+
+      {/* FIXED BOTTOM */}
       <div className="sidebar-footer">
         <p>Brain Training App</p>
         <span>Version 1.0</span>
       </div>
+
     </div>
   );
 }
