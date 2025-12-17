@@ -7,8 +7,8 @@ const LoginPage = ({ setLo }) => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const handleLogin = (e) => {
-    e.preventDefault();
+  const  handleLogin = (event) => {
+    event.preventDefault();
     const savedUser = JSON.parse(localStorage.getItem("user"));
     if (!savedUser) {
       alert("No user found! Please register first.");
@@ -37,7 +37,7 @@ const LoginPage = ({ setLo }) => {
               placeholder="you@example.com"
               required
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(event) => setEmail(event.target.value)}
             />
           </div>
           <label>Password</label>
@@ -47,7 +47,7 @@ const LoginPage = ({ setLo }) => {
               placeholder="••••••••"
               required
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={(event) => setPassword(event.target.value)}
             />
           </div>
           <button type="submit" className="signin-btn">
@@ -58,9 +58,7 @@ const LoginPage = ({ setLo }) => {
           Don’t have an account?{" "}
           <Link to="/register">Create one for free</Link>
         </p>
-      </div>
-      
-      
+      </div>      
     </div>
   );
 };
