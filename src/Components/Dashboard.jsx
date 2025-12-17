@@ -4,29 +4,27 @@ import Header from "./Header";
 import { useNavigate } from "react-router-dom";
 
 export default function Dashboard() {
-
-  const navigate = useNavigate();   // <-- FIX
+  const navigate = useNavigate();
 
   const today = new Date();
   const formattedDate = today.toLocaleDateString("en-US", {
     weekday: "long",
     year: "numeric",
     month: "long",
-    day: "numeric"
+    day: "numeric",
   });
 
   function handleStartChallenge() {
-    navigate("/game");  // <-- FIXED
+    navigate("/game");
   }
 
   return (
     <div>
       <Header />
+
       <div className="dashboard">
-
-        {/* Header Section */}
+        {/* Top Header */}
         <div className="top-header">
-
           <div>
             <p className="date-text">{formattedDate}</p>
             <h2 className="welcome">Welcome Back! 👋</h2>
@@ -45,44 +43,52 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* Daily Challenge Card */}
-        <div className="daily-card">
-          <h3 className="section-title">Today's Challenge</h3>
-          <p className="section-sub">Complete 5 games to maintain your streak and earn rewards.</p>
+        {/* MAIN GRID */}
+        <div className="main-grid">
+          {/* Daily Challenge */}
+          <div className="daily-card">
+            <h3 className="section-title">Today's Challenge</h3>
+            <p className="section-sub">
+              Complete 5 games to maintain your streak and earn rewards.
+            </p>
 
-          <div className="games-row">
-            <div className="game-box">😊</div>
-            <div className="game-box">😁</div>
-            <div className="game-box">😃</div>
-            <div className="game-box">😛</div>
-            <div className="game-box">🙂</div>
-          </div>
-
-          <button className="start-btn" onClick={handleStartChallenge}>
-            ⚡ Start Daily Challenge →
-          </button>
-
-        </div>
-
-        {/* Right Section */}
-        <div className="right-section">
-          <div className="level-card">
-            <h3>Current Level</h3>
-            <p className="level-num">Level 1</p>
-            <div className="progress">
-              <div className="progress-fill"></div>
+            <div className="games-row">
+              <div className="game-box">🃏</div>
+              <div className="game-box">🔢</div>
+              <div className="game-box">🎨</div>
+              <div className="game-box">👤</div>
+              <div className="game-box">📝</div>
             </div>
-            <p className="points">0 / 2000 pts</p>
+
+            <button className="start-btn" onClick={handleStartChallenge}>
+              ⚡ Start Daily Challenge →
+            </button>
           </div>
 
-          <div className="quick-stats">
-            <h3>Quick Stats</h3>
-            <p>Games Played: 0</p>
-            <p>Avg Accuracy: 0%</p>
-            <p>Best Streak: 0 days</p>
+          {/* Right Section */}
+          <div className="right-section">
+            <div className="level-card">
+              <h3>Current Level</h3>
+              <p className="level-num">Level 1</p>
+
+              <div className="progress">
+                <div className="progress-fill"></div>
+              </div>
+
+              <p className="points">0 / 2000 pts</p>
+            </div>
+
+            <div className="quick-stats">
+              <h3>Quick Stats</h3>
+              <p>Games Played: 0</p>
+              <p>Avg Accuracy: 0%</p>
+              <p>Best Streak: 0 days</p>
+            </div>
           </div>
         </div>
+       
 
+        {/* Bottom Section */}
         <div className="bottom-wrapper">
           <div className="achievements">
             <h3>Recent Achievements</h3>
@@ -103,7 +109,6 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
-
       </div>
     </div>
   );

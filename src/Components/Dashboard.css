@@ -1,12 +1,13 @@
-/* Layout */
+/* Root */
 .dashboard {
   width: 100%;
   padding: 25px;
   background: #f7faff;
   font-family: "Poppins", sans-serif;
+  margin-left: -22px;
 }
 
-/* Top Gradient Header */
+/* Top Header */
 .top-header {
   background: linear-gradient(135deg, #8b2cff, #2d64ff);
   padding: 35px;
@@ -16,24 +17,26 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 40px;
-  width: 92%;
+  width: 93%;
+
 }
 
 .date-text {
-  opacity: 0.8;
   font-size: 14px;
+  opacity: 0.85;
 }
+
 .welcome {
-  margin: 6px 0;
   font-size: 28px;
+  margin: 6px 0;
 }
 
 .sub-texts {
-  opacity: 0.85;
   font-size: 15px;
+  opacity: 0.9;
 }
 
-/* Streak + Brain Age */
+/* Stats */
 .stats-box {
   display: flex;
   gap: 20px;
@@ -44,7 +47,6 @@
   padding: 14px 22px;
   border-radius: 15px;
   text-align: center;
-  backdrop-filter: blur(8px);
 }
 
 .stat-num {
@@ -54,18 +56,22 @@
 
 .stat-label {
   font-size: 12px;
-  opacity: 0.9;
 }
 
-/* Daily Challenge Card */
+/* MAIN GRID */
+.main-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+/* Daily Card */
 .daily-card {
   background: white;
   padding: 25px;
   border-radius: 20px;
-  margin-top: 25px;
-  width: 60%;
-  float: left;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .section-title {
@@ -78,6 +84,7 @@
   margin-top: 5px;
 }
 
+/* Games */
 .games-row {
   display: flex;
   gap: 15px;
@@ -85,13 +92,18 @@
 }
 
 .game-box {
-  width: 130px;
-  height: 115px;
+  width: 120px;
+  height: 110px;
   background: #e9eefe;
   border-radius: 15px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 50px;
+  justify-content: center;
 }
 
-/* Start Button */
+/* Button */
 .start-btn {
   width: 100%;
   background: linear-gradient(135deg, #8b2cff, #2d64ff);
@@ -103,19 +115,21 @@
   cursor: pointer;
 }
 
-/* Right Panel */
+/* Right Section */
 .right-section {
-  float: right;
-  width: 34%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
+/* Level Card */
 .level-card {
   background: #fff6e4;
   padding: 20px;
   border-radius: 20px;
-  margin-top: 25px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  width: 83%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  width: 82%;
+
 }
 
 .level-num {
@@ -142,29 +156,32 @@
   font-size: 14px;
 }
 
+/* Quick Stats */
 .quick-stats {
   background: white;
   padding: 20px;
   border-radius: 20px;
-  margin-top: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  width: 83%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  width: 82%;
+
 }
 
 /* Bottom Section */
 .bottom-wrapper {
-  clear: both;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
   margin-top: 30px;
-  gap: 20px;
 }
 
-.achievements, .activity {
+.achievements,
+.activity {
   background: white;
-  padding: 20px;
+  padding: 60px;
   border-radius: 20px;
-  flex: 1;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  width: 76%;
+
 }
 
 .no-achievements {

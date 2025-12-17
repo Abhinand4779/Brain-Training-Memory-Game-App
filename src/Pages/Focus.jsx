@@ -53,8 +53,6 @@ const Focus = () => {
                     Start Training
                 </button>
             </div>
-
-
         </div>
     );
 };

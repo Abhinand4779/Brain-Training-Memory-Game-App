@@ -5,7 +5,8 @@ import { Outlet } from "react-router-dom";
 export default function DashboardLayout() {
   return (
     <div style={
-      { display: "flex" }
+      { display: "flex"
+       }
       }>
       <Sidebar />
       <div style={
