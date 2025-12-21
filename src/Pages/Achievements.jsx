@@ -5,99 +5,106 @@ import Header from "../Components/Header";
 
 export default function Achievements() {
   return (
-    <div className="achievements-wrapper">
-      <Header/>
-      {/* Header */}
-      <div className="achievements-header">
-        <button className="back-btn">
-          <FaArrowLeft size={14} />
-          Back
-        </button>
-        <h2>Achievements</h2>
-        <p className="sub-texti">Your brain training milestones</p>
+    <>
+      <Header />
+
+      <div className="achv-page">
+        {/* HEADER SECTION */}
+        <div className="achv-top">
+          <button className="achv-back">
+            <FaArrowLeft size={14} />
+            <span>Back</span>
+          </button>
+
+          <div className="achv-title-wrap">
+            <h2>Achievements</h2>
+            <p>Your brain training milestones</p>
+          </div>
+        </div>
+
+        {/* SUMMARY CARD */}
+        <div className="achv-summary">
+          <div className="achv-summary-left">
+            <div className="achv-trophy">🏆</div>
+            <div>
+              <h3>0 / 6</h3>
+              <span>Achievements Unlocked</span>
+            </div>
+          </div>
+
+          <div className="achv-summary-right">
+            <span className="achv-progress-label">
+              Completion Progress
+            </span>
+            <div className="achv-progress-bar">
+              <div className="achv-progress-fill" />
+            </div>
+            <span className="achv-progress-percent">0%</span>
+          </div>
+        </div>
+
+        {/* STREAK ACHIEVEMENTS */}
+        <h3 className="achv-section">🔥 Streak Achievements</h3>
+
+        <div className="achv-card achv-locked">
+          <div className="achv-icon">🔥</div>
+          <div>
+            <h4>Streak Warrior</h4>
+            <p>Maintain a 30-day streak</p>
+            <small>Keep training to unlock this achievement</small>
+          </div>
+        </div>
+
+        {/* SPECIAL ACHIEVEMENTS */}
+        <h3 className="achv-section">🎯 Special Achievements</h3>
+
+        <div className="achv-grid">
+          <div className="achv-card achv-locked">
+            <div className="achv-icon">🎯</div>
+            <div>
+              <h4>First Week Complete</h4>
+              <p>Maintain a 7-day streak</p>
+              <small>Keep training to unlock this achievement</small>
+            </div>
+          </div>
+
+          <div className="achv-card achv-locked">
+            <div className="achv-icon">🧠</div>
+            <div>
+              <h4>Memory Master</h4>
+              <p>Perfect score in card matching game</p>
+              <small>Keep training to unlock this achievement</small>
+            </div>
+          </div>
+
+          <div className="achv-card achv-locked">
+            <div className="achv-icon">⚡</div>
+            <div>
+              <h4>Speed Demon</h4>
+              <p>Complete a perfect game under 30 seconds</p>
+              <small>Keep training to unlock this achievement</small>
+            </div>
+          </div>
+
+          <div className="achv-card achv-locked">
+            <div className="achv-icon">🏋️</div>
+            <div>
+              <h4>Brain Athlete</h4>
+              <p>Play 100 games</p>
+              <small>Keep training to unlock this achievement</small>
+            </div>
+          </div>
+
+          <div className="achv-card achv-locked">
+            <div className="achv-icon">✨</div>
+            <div>
+              <h4>Perfectionist</h4>
+              <p>Achieve 10 perfect scores</p>
+              <small>Keep training to unlock this achievement</small>
+            </div>
+          </div>
+        </div>
       </div>
-
-      {/* Summary Card */}
-      <div className="summary-card">
-        <div className="summary-left">
-          <div className="trophy-icon">🏆</div>
-          <div>
-            <h3>0 / 6</h3>
-            <p>Achievements Unlocked</p>
-          </div>
-        </div>
-        <div className="summary-right">
-          <p>Completion Progress</p>
-          <div className="progress-bar">
-            <div className="progress-fill" style={{ width: "0%" }}></div>
-          </div>
-          <span className="progress-percent">0%</span>
-        </div>
-      </div>
-
-      {/* Streak Achievements */}
-      <h3 className="section-title">🔥 Streak Achievements</h3>
-
-      <div className="achievement-card locked">
-        <div className="icon-area">🔥</div>
-        <div>
-          <h4>Streak Warrior</h4>
-          <p className="desci">Maintain a 30-day streak</p>
-          <p className="tip">Keep training to unlock this achievement</p>
-        </div>
-      </div>
-
-      {/* Special Achievements */}
-      <h3 className="section-title">🎯 Special Achievements</h3>
-
-      <div className="achievements-grid">
-
-        <div className="achievement-card locked">
-          <div className="icon-area">🎯</div>
-          <div>
-            <h4>First Week Complete</h4>
-            <p className="desci">Maintain a 7-day streak</p>
-            <p className="tip">Keep training to unlock this achievement</p>
-          </div>
-        </div>
-
-        <div className="achievement-card locked">
-          <div className="icon-area">🧠</div>
-          <div>
-            <h4>Memory Master</h4>
-            <p className="desci">Perfect score in card matching game</p>
-            <p className="tip">Keep training to unlock this achievement</p>
-          </div>
-        </div>
-
-        <div className="achievement-card locked">
-          <div className="icon-area">⚡</div>
-          <div>
-            <h4>Speed Demon</h4>
-            <p className="desci">Complete a perfect game in under 30 seconds</p>
-            <p className="tip">Keep training to unlock this achievement</p>
-          </div>
-        </div>
-
-        <div className="achievement-card locked">
-          <div className="icon-area">🏋️</div>
-          <div>
-            <h4>Brain Athlete</h4>
-            <p className="desci">Play 100 games</p>
-            <p className="tip">Keep training to unlock this achievement</p>
-          </div>
-        </div>
-
-        <div className="achievement-card locked">
-          <div className="icon-area">✨</div>
-          <div>
-            <h4>Perfectionist</h4>
-            <p className="desci">Achieve 10 perfect scores</p>
-            <p className="tip">Keep training to unlock this achievement</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
+    </>
   );
 }

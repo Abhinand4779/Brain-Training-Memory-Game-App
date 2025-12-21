@@ -1,50 +1,107 @@
-.memory-wrapper {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 100px);
-  gap: 12px;
+.rgm_container_main {
+  min-height: 100vh;
+  display: flex;
   justify-content: center;
-  margin: 20px auto;
+  align-items: center;
+  background: #eef2f7;
 }
 
-.box {
-  width: 100px;
-  height: 100px;
-  background: #dddddd;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: 0.3s;
+/* ---------- COMMON BOX ---------- */
+.rgm_box_cards,
+.rgm_box_numbers,
+.rgm_box_pattern,
+.rgm_box_faces,
+.rgm_box_words {
+  width: 340px;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-.box:hover {
-  transform: scale(1.05);
+/* ---------- TITLES ---------- */
+.rgm_title_cards,
+.rgm_title_numbers,
+.rgm_title_pattern,
+.rgm_title_faces,
+.rgm_title_words {
+  margin-bottom: 16px;
 }
 
-.highlight {
-  background: #00bfff; /* blue highlight */
+/* ---------- CARD GAME ---------- */
+.rgm_grid_cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
 }
 
-.selected {
-  background: #8bc34a; /* green when user selects */
-}
-
-.start-btn {
-  padding: 10px 25px;
-  background: #6a5acd;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-size: 18px;
+.rgm_card_face_down {
+  height: 60px;
+  background: #cfd8ff;
   border-radius: 8px;
-  margin-top: 15px;
+  cursor: pointer;
 }
 
-.message {
-  font-size: 20px;
-  margin-top: 15px;
-  font-weight: bold;
+.rgm_card_face_up {
+  height: 60px;
+  background: #4f6cff;
+  color: #fff;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+}
+
+/* ---------- NUMBER GAME ---------- */
+.rgm_sequence_display {
+  font-size: 22px;
+}
+
+.rgm_input_numbers {
+  width: 100%;
+  padding: 10px;
+}
+
+.rgm_result_numbers {
+  margin-top: 8px;
+}
+
+/* ---------- PATTERN GAME ---------- */
+.rgm_grid_pattern {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.rgm_pattern_idle {
+  height: 50px;
+  background: #dcdcdc;
+  border-radius: 6px;
+}
+
+.rgm_pattern_active {
+  height: 50px;
+  background: #4f6cff;
+  border-radius: 6px;
+}
+
+/* ---------- FACE GAME ---------- */
+.rgm_face_item {
+  font-size: 18px;
+}
+
+.rgm_face_hint {
+  font-style: italic;
+}
+
+/* ---------- WORD GAME ---------- */
+.rgm_words_display {
+  font-size: 18px;
+}
+
+.rgm_input_words {
+  width: 100%;
+  padding: 10px;
 }

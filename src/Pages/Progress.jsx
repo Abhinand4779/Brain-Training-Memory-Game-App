@@ -1,83 +1,108 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Progress.css";
 import Header from "../Components/Header";
-import Dashboard from "../Components/Dashboard";
 
 export default function Progress() {
-  return (
-    <div>
-      <Header/>
-      <div className="progress-container">
-        <button onClick={<Dashboard/>} className="back-btno">← Back</button>
-        <h2 className="title">Your Progress</h2>
-        <p className="subtitle">Track your cognitive improvement journey</p>
+  const navigate = useNavigate();
 
-        {/* Top Stats Row */}
-        <div className="stats-row">
-          <div className="stat-card purple">
-            <div className="icon">🔮</div>
-            <h3 className="value">30</h3>
-            <p className="label">Cognitive performance score</p>
-            <span className="stat-title">Brain Age</span>
-          </div>
-          <div className="stat-card blue">
-            <div className="icon">🎯</div>
-            <h3 className="value">0%</h3>
-            <p className="label">Overall performance rate</p>
-            <span className="stat-title">Avg Accuracy</span>
-          </div>
-          <div className="stat-card green">
-            <div className="icon">📅</div>
-            <h3 className="value">0</h3>
-            <p className="label">Consecutive training days</p>
-            <span className="stat-title">Best Streak</span>
-          </div>
-          <div className="stat-card orange">
-            <div className="icon">⚡</div>
-            <h3 className="value">0</h3>
-            <p className="label">Level 1 achievement</p>
-            <span className="stat-title">Total Points</span>
+  return (
+    <>
+      <Header />
+
+      <div className="progress-page">
+        {/* HEADER ROW */}
+        <div className="progress-top-row">
+          <button className="progress-back" onClick={() => navigate(-1)}>
+            ← Back
+          </button>
+
+          <div className="progress-title-group">
+            <h1>Your Progress</h1>
+            <p>Track your cognitive improvement journey</p>
           </div>
         </div>
 
-        {/* Trend + Games Row */}
-        <div className="bottom-row">
-          <div className="trend-card"> 
-            <h4>📈 7-Day Performance Trend</h4>
-            <div className="empty-section">
-              <span className="empty-icon">📉</span>
+        {/* TOP CARDS */}
+        <div className="progress-cards">
+          <div className="progress-card purple">
+            <span className="card-icon">🧠</span>
+            <div>
+              <small>Brain Age</small>
+              <h2>30</h2>
+              <p>Cognitive performance score</p>
+            </div>
+          </div>
+
+          <div className="progress-card blue">
+            <span className="card-icon">🎯</span>
+            <div>
+              <small>Avg Accuracy</small>
+              <h2>0%</h2>
+              <p>Overall performance rate</p>
+            </div>
+          </div>
+
+          <div className="progress-card green">
+            <span className="card-icon">📅</span>
+            <div>
+              <small>Best Streak</small>
+              <h2>0</h2>
+              <p>Consecutive training days</p>
+            </div>
+          </div>
+
+          <div className="progress-card orange">
+            <span className="card-icon">⚡</span>
+            <div>
+              <small>Total Points</small>
+              <h2>0</h2>
+              <p>Level 1 achievement</p>
+            </div>
+          </div>
+        </div>
+
+        {/* BOTTOM SECTION */}
+        <div className="progress-bottom">
+          <div className="progress-box">
+            <h3>📈 7-Day Performance Trend</h3>
+            <div className="progress-empty">
+              <span>📉</span>
               <p>No data yet</p>
               <small>Complete some games to see your progress</small>
             </div>
           </div>
-          <div className="games-card">
-            <h4>🎮 Games Played by Type</h4>
-            <div className="empty-section">
-              <span className="empty-icon">🎖️</span>
+
+          <div className="progress-box">
+            <h3>🎮 Games Played by Type</h3>
+            <div className="progress-empty">
+              <span>🏅</span>
               <p>No games played yet</p>
               <small>Start practicing to see your stats</small>
             </div>
           </div>
         </div>
 
-        {/* Level Bar */}
-        <div className="level-section">
-          <div className="level-info">
+        {/* LEVEL BAR */}
+        <div className="progress-level">
+          <div className="level-left">
             <span className="level-icon">⭐</span>
             <div>
               <h3>Level 1</h3>
-              <small>2000 points to Level 2</small>
+              <span>2000 points to Level 2</span>
             </div>
           </div>
+
           <div className="level-bar">
-            <div className="level-progress"></div>
+            <div className="level-fill"></div>
           </div>
+
           <div className="level-points">
             <span>0 pts</span>
             <span>2000 pts</span>
           </div>
         </div>
-        </div>
       </div>
+    </>
   );
 }

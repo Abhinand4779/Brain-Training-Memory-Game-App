@@ -1,73 +1,104 @@
-import React from 'react'
+import React from "react";
+import "./Science.css";
 
-const Science = () => {
+export default function NeuroscienceSection() {
   return (
-    <div>
-      <div>
-        <p>The Neuroscience Behind Brain Training
+    <div className="neuro-wrapper">
+      {/* Top Card */}
+      <div className="neuro-card">
+        <div className="neuro-header">
+          <span className="neuro-icon">📖</span>
+          <h2 className="neuro-title">The Neuroscience Behind Brain Training</h2>
+        </div>
+
+        <p className="neuro-description">
+          <strong>Neuroplasticity</strong> is the brain's remarkable ability to
+          reorganize itself by forming new neural connections throughout life.
+          This fundamental property allows us to learn, adapt, and improve
+          cognitive functions through targeted practice.
         </p>
-        <br />
-        <br />
-      </div>
-      <div>
-        <p>Regular Practice <br />
-          Consistency is crucial. Daily short sessions are more effective than occasional long ones, as they reinforce neural pathways.</p>
-      </div>
-      <div>
-        <p> Progressive Challenge <br />
-          Exercises must be challenging enough to engage but not so difficult as to cause frustration or disengagement.</p>
-      </div>
-      <div>
-        <p>Varied Exercises <br />
-          Targeting multiple cognitive domains helps develop well-rounded mental fitness and prevents adaptive plateaus.</p>
-      </div>
-      <div>
-        <p>Immediate Feedback <br />
-          Real-time performance feedback helps reinforce learning and motivates continued engagement.</p>
-      </div>
-      <div>
-        <p>Cognitive Domains We Target</p>
-        <div>
-          <p>🧠 Working Memory <br />
-            The ability to temporarily hold and manipulate information in your mind. Critical for reasoning, learning, and comprehension. <br />
 
-            Trained by: Number Sequence, Pattern Recognition</p>
-        </div>
-        <div>
-          <p> 👁️ Visual Processing <br />
-            The ability to recognize, recall, and manipulate visual information. Essential for spatial awareness and pattern detection. <br />
+        <p className="neuro-description">
+          Research has shown that consistent cognitive training can lead to
+          measurable improvements in specific cognitive domains. The key factors
+          for effective brain training include:
+        </p>
 
-            Trained by: Card Matching, Pattern Recognition</p>
-        </div>
-        <div>
-          💭 Episodic Memory <br />
-          The ability to recall specific events, experiences, and contextual details. Important for learning and personal history. <br />
+        <div className="neuro-grid">
+          <div className="neuro-box neuro-blue">
+            <h4>⚡ Regular Practice</h4>
+            <p>
+              Consistency is crucial. Daily short sessions are more effective
+              than occasional long ones, as they reinforce neural pathways.
+            </p>
+          </div>
 
-          Trained by: Name & Face Memory, Word List Recall
-        </div>
-        <div>
-          <p>⚡ Processing Speed <br />
-            The rate at which you can take in, understand, and respond to information. Affects overall cognitive efficiency. <br />
+          <div className="neuro-box neuro-green">
+            <h4>🟢 Progressive Challenge</h4>
+            <p>
+              Exercises must be challenging enough to engage but not so
+              difficult as to cause frustration or disengagement.
+            </p>
+          </div>
 
-            Trained by: All games with time-based scoring</p>
+          <div className="neuro-box neuro-purple">
+            <h4>🧩 Varied Exercises</h4>
+            <p>
+              Targeting multiple cognitive domains helps develop well-rounded
+              mental fitness and prevents adaptive plateaus.
+            </p>
+          </div>
+
+          <div className="neuro-box neuro-orange">
+            <h4>📈 Immediate Feedback</h4>
+            <p>
+              Real-time performance feedback helps reinforce learning and
+              motivates continued engagement.
+            </p>
+          </div>
         </div>
       </div>
-      <div>
-        <p>Evidence-Based Approach <br />Our games are inspired by validated cognitive assessment and training protocols used in research settings, including: <br />
-          N-back tasks for working memory training <br />
 
-          Paired-associate learning paradigms for memory consolidation <br />
+      {/* Bottom Section */}
+      <div className="domain-card">
+        <h3 className="domain-title">Cognitive Domains We Target</h3>
 
-          Matrix reasoning for pattern recognition and fluid intelligence <br />
+        <div className="domain-item">
+          <h4>🧠 Working Memory</h4>
+          <p>
+            The ability to temporarily hold and manipulate information in your
+            mind. Critical for reasoning, learning, and comprehension.
+          </p>
+          <span>Trained by: Number Sequence, Pattern Recognition</span>
+        </div>
 
-          Spaced repetition principles for optimal memory retention</p>
+        <div className="domain-item">
+          <h4>👁️ Visual Processing</h4>
+          <p>
+            The ability to recognize, recall, and manipulate visual information.
+            Essential for spatial awareness and pattern detection.
+          </p>
+          <span>Trained by: Card Matching, Pattern Recognition</span>
+        </div>
 
-        <br />
+        <div className="domain-item">
+          <h4>📘 Episodic Memory</h4>
+          <p>
+            The ability to recall specific events, experiences, and contextual
+            details. Important for learning and personal history.
+          </p>
+          <span>Trained by: Name & Face Memory, Word List Recall</span>
+        </div>
 
-        <p><b>Important Note:</b> While brain training can improve specific cognitive skills, it should be part of a holistic approach to brain health that includes physical exercise, proper nutrition, quality sleep, and social engagement.</p>
+        <div className="domain-item domain-highlight">
+          <h4>⚡ Processing Speed</h4>
+          <p>
+            The rate at which you can take in, understand, and respond to
+            information. Affects overall cognitive efficiency.
+          </p>
+          <span>Trained by: All games with time-based scoring</span>
+        </div>
       </div>
     </div>
-  )
+  );
 }
-
-export default Science

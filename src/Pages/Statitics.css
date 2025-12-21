@@ -1,97 +1,179 @@
-.stats-dashboard {
-  font-family: sans-serif;
-  color: #333;
-  padding: 20px;
-  margin-top: 30px;
+.statistics-page {
+  padding: 32px 24px;
+  background: #f7f8fc;
+  min-height: 100vh;
 }
 
-.stats-header h2 {
-  margin: 0 0 20px;
-  font-size: 24px;
-  font-weight: 500;
+/* HEADER */
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+  margin-bottom: 28px;
 }
 
-.overview-cards {
+.back-btn {
+  background: #eef2ff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #4338ca;
+}
+
+.back-btn:hover {
+   background: #e0e7ff;
+}
+
+.header-text h2 {
+  margin: 0;
+}
+
+.header-text p {
+   margin-top: 4px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* STAT CARDS */
+.stats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   margin-bottom: 32px;
 }
 
-.cardi {
-  background-color: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 16px;
-  text-align: center;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+.stat-card {
+  background: white;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
 .card-title {
-  font-size: 14px;
-  color: #777;
-  margin-bottom: 8px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  font-size: 13px;
+  color: #6b7280;
 }
 
 .card-value {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 4px;
+  font-size: 26px;
+  margin: 8px 0;
 }
 
-.card-subtext {
+.card-subtitle {
   font-size: 12px;
-  color: #aaa;
+  color: #9ca3af;
 }
 
-.game-type-section h3 {
+/* SECTIONS */
+.section {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  margin-bottom: 28px;
+}
+
+.section h3 {
   margin-bottom: 16px;
-  font-size: 18px;
+}
+
+/* GAME LIST */
+.game-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.game-row {
+  border: 1px solid #e5e7eb;
+  padding: 14px;
+  border-radius: 10px;
+}
+
+.game-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.game-name {
   font-weight: 500;
 }
 
-.game-type-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+.game-meta {
+  font-size: 12px;
+  color: #6b7280;
 }
 
-.game-type-row {
-  display: flex;
-  flex-direction: column;
-}
-
-.game-type-name {
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.game-type-stats {
-  font-size: 14px;
-  color: #777;
-  margin: 4px 0;
-}
-
-.progress-bar {
-  position: relative;
-  height: 6px;
+/* RANGE BAR */
+.range-bar {
   width: 100%;
-  background-color: #f0f0f0;
-  border-radius: 3px;
-  overflow: hidden;
+  height: 6px;
+  appearance: none;
+  background: #e5e7eb;
+  border-radius: 6px;
 }
 
-.progress-fill {
-  background-color: #4caf50;
-  height: 100%;
-  transition: width 0.3s ease;
+.range-bar::-webkit-slider-thumb {
+  appearance: none;
 }
 
-.no-games {
-  margin-top: 40px;
+.range-bar::-moz-range-thumb {
+  appearance: none;
+}
+
+/* EMPTY / PLACEHOLDER */
+.empty-text,
+.placeholder {
   text-align: center;
-  font-size: 16px;
-  color: #999;
+  margin-top: 12px;
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+/* ACHIEVEMENTS */
+.achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.achievement-card {
+  padding: 16px;
+  background: #fafafa;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .achievement-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .statistics-page {
+    padding: 24px 16px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .achievement-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

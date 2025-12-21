@@ -1,80 +1,93 @@
 import React from "react";
+import "./Overview.css";
 
-const Overview = () => {
+export default function BrainTrainingInfo() {
   return (
-    <div className="content">
-
+    <div className="bti_page_wrapper">
       {/* What is Brain Training */}
-      <div className="section-card">
-        <div className="section-title">
-          <span className="icon blue">❓</span>
-          <h3>What is Brain Training?</h3>
+      <div className="bti_card bti_card_primary">
+        <div className="bti_card_header">
+          <div className="bti_icon bti_icon_blue">◎</div>
+          <h3 className="bti_title">What is Brain Training?</h3>
         </div>
-        <p>
-          Brain training involves performing mental exercises to improve cognitive
-          functions like memory, attention, processing speed, and problem-solving.
+        <p className="bti_text">
+          Brain training, also known as cognitive training, involves performing
+          specific mental exercises designed to improve cognitive functions such
+          as memory, attention, processing speed, and problem-solving abilities.
         </p>
-        <p>
-          Our app combines scientific cognitive exercises with gamified experiences
-          to make brain training effective and engaging.
+        <p className="bti_text">
+          Our app combines gamification with scientifically-validated cognitive
+          exercises to make brain training engaging, effective, and sustainable.
+          Each game targets specific cognitive domains while providing immediate
+          feedback and adaptive difficulty.
         </p>
       </div>
 
-      {/* Who Is This For + Benefits */}
-      <div className="two-columns">
-
-        {/* Left Box */}
-        <div className="two-col-card purple-light">
-          <h4 className="col-title">🎯 Who Is This For?</h4>
-          <ul>
-            <li>Students improving study performance & memory</li>
-            <li>Professionals boosting mental sharpness</li>
-            <li>Adults 45+ improving memory & aging well</li>
-            <li>Anyone who wants better thinking habits</li>
+      {/* Middle Section */}
+      <div className="bti_grid_two">
+        {/* Who is this for */}
+        <div className="bti_card bti_card_purple">
+          <div className="bti_card_header">
+            <div className="bti_icon bti_icon_purple">👤</div>
+            <h3 className="bti_title">Who Is This For?</h3>
+          </div>
+          <ul className="bti_list">
+            <li><b>Students</b> looking to improve study performance and memory retention</li>
+            <li><b>Professionals</b> wanting to maintain mental sharpness and focus</li>
+            <li><b>Adults</b> 45+ interested in cognitive health and aging well</li>
+            <li><b>Anyone</b> who wants to challenge their mind and build healthy habits</li>
           </ul>
         </div>
 
-        {/* Right Box */}
-        <div className="two-col-card green-light">
-          <h4 className="col-title">🧠 Key Benefits</h4>
-          <ul>
-            <li><b>Enhanced Memory:</b> Improve working & long-term memory</li>
-            <li><b>Better Focus:</b> Reduce distractions & improve attention</li>
-            <li><b>Faster Processing Speed:</b> React quicker and solve tasks faster</li>
-            <li><b>Problem Solving:</b> Develop analytical thinking ability</li>
+        {/* Key Benefits */}
+        <div className="bti_card bti_card_green">
+          <div className="bti_card_header">
+            <div className="bti_icon bti_icon_green">📈</div>
+            <h3 className="bti_title">Key Benefits</h3>
+          </div>
+          <ul className="bti_list">
+            <li><b>Enhanced Memory:</b> Improve working and long-term memory</li>
+            <li><b>Better Focus:</b> Increase attention span and concentration</li>
+            <li><b>Faster Processing:</b> Speed up mental calculations and reactions</li>
+            <li><b>Problem Solving:</b> Develop strategic thinking abilities</li>
           </ul>
         </div>
       </div>
 
       {/* How It Works */}
-      <h3 className="how-title">🔍 How It Works</h3>
-      <div className="three-steps">
-        <div className="step-card yellow-light">
-          <h2>1</h2>
-          <h4>Daily Practice</h4>
-          <p>Complete 5–15 min curated brain exercises each day.</p>
+      <div className="bti_card bti_card_yellow">
+        <div className="bti_card_header">
+          <div className="bti_icon bti_icon_orange">⏱</div>
+          <h3 className="bti_title">How It Works</h3>
         </div>
 
-        <div className="step-card yellow-light">
-          <h2>2</h2>
-          <h4>Adaptive Difficulty</h4>
-          <p>
-            Exercises adjust automatically to match your skill level and
-            keep you challenged.
-          </p>
-        </div>
+        <div className="bti_steps_grid">
+          <div className="bti_step_box">
+            <span className="bti_step_number">1</span>
+            <h4 className="bti_step_title">Daily Practice</h4>
+            <p className="bti_step_text">
+              Complete 5–15 minute sessions each day with our curated challenges
+            </p>
+          </div>
 
-        <div className="step-card yellow-light">
-          <h2>3</h2>
-          <h4>Track Progress</h4>
-          <p>
-            Monitor improvements with detailed metrics & visual stats.
-          </p>
+          <div className="bti_step_box">
+            <span className="bti_step_number">2</span>
+            <h4 className="bti_step_title">Adaptive Difficulty</h4>
+            <p className="bti_step_text">
+              Games adjust to your skill level to keep you challenged but not
+              frustrated
+            </p>
+          </div>
+
+          <div className="bti_step_box">
+            <span className="bti_step_number">3</span>
+            <h4 className="bti_step_title">Track Progress</h4>
+            <p className="bti_step_text">
+              Monitor improvements with detailed metrics and visual feedback
+            </p>
+          </div>
         </div>
       </div>
-
     </div>
   );
-};
-
-export default Overview;
+}

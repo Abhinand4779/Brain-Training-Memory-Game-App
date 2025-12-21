@@ -1,199 +1,189 @@
-/* =======================
-   MAIN HEADER
-========================= */
-.header-container {
-  width: 100%;
-  height: 50px;
-  padding: 5px 14px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: white;
-  border-bottom: 1px solid #e8e8e8;
+/* ===== HEADER POSITIONING ===== */
+.bt-header {
   position: fixed;
   top: 0;
-  z-index: 1000;
-}
+  left: 260px;                       /* ✅ MATCH SIDEBAR WIDTH */
+  width: calc(100% - 260px);         /* ✅ NO GAP */
+  height: 72px;
+  background: #ffffff;
 
-/* Left side */
-.header-left {
   display: flex;
   align-items: center;
-  gap: 6px;
+  justify-content: space-between;
+
+  padding: 0 28px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  z-index: 100;
+  box-sizing: border-box;
 }
 
-.logo-box {
-  background: linear-gradient(135deg, #a200ff, #5a00ff);
-  padding: 6px;
-  border-radius: 10px;
-}
-
-.logo-icon {
-  width: 24px;
-  height: 24px;
-}
-
-.title-box h2 {
-  margin: 0;
-  font-size: 15px;
-  font-weight: 600;
-  color: #333;
-}
-
-.title-box p {
-  margin: 0;
-  font-size: 10px;
-  color: #888;
-  margin-top: -2px;
-}
-
-/* Right side */
-.header-right {
+/* ===== LEFT ===== */
+.bt-header-left {
   display: flex;
   align-items: center;
   gap: 12px;
+  min-width: 0;  
 }
 
-/* Level box */
-.level-box {
+.bt-logo-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 4px 10px;
-  background: #f8f1ff;
-  border: 1px solid #eadbff;
-  border-radius: 12px;
-  font-size: 11px;
+  justify-content: center;
+  flex-shrink: 0; 
 }
 
-.icon {
-  font-size: 12px;
+.bt-logo-img {
+  width: 100px;                  /* 🔥 reduce size */
+  height: 70px;
 }
 
-/* Profile */
-.profile-wrapper {
+.bt-title-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.bt-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #7a3cff;
+}
+
+.bt-subtitle {
+  margin: 0;
+  font-size: 13px;
+  color: #9a9a9a;
+}
+
+/* ===== RIGHT ===== */
+.bt-header-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* LEVEL PILL */
+.bt-level-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f4f0ff;
+  padding: 8px 14px;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b35ff;
+}
+
+.bt-separator {
+  color: #b9a7ff;
+}
+
+/* AVATAR */
+.bt-avatar-wrapper {
   position: relative;
 }
 
-.profile-circle {
-  width: 32px;
-  height: 32px;
-  background: linear-gradient(135deg, #9f00ff, #4f00ff);
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.bt-avatar {
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
+  background: linear-gradient(135deg, #9b5cff, #6f3cff);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.bt-online-dot {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 10px;
+  height: 10px;
+  background: #22c55e;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .bt-header {
+    left: 0;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .bt-header {
+    padding: 0 12px;
+  }
+
+  .bt-title-box {
+    max-width: 140px;       /* 🔥 prevents overlap */
+    overflow: hidden;
+    text-overflow: ellipsis;          /* hide text on mobile */
+  }
+
+  .bt-header-left {
+    gap: 8px;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .bt-subtitle {
+    font-size: 11px;        /* compact subtitle */
+    line-height: 1;
+    opacity: 0.7;
+  }
+
+  .bt-level-pill {
+    display: none;
+  }
+}
+
+/* PROFILE MENU DROPDOWN */
+.bt-profile-menu {
+  position: absolute;
+  top: 52px;              /* BELOW AVATAR */
+  right: 0;
+  width: 220px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  padding: 10px;
+  z-index: 9999;          /* 🔥 MOST IMPORTANT */
+}
+
+/* EMAIL */
+.bt-email {
+  font-size: 13px;
+  color: #555;
+  margin: 8px 10px;
+  word-break: break-all;
+}
+
+/* MENU ITEMS */
+.bt-menu-item {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: left;
   font-size: 14px;
   cursor: pointer;
 }
 
-.online-dot {
-  position: absolute;
-  bottom: 1px;
-  right: 1px;
-  width: 7px;
-  height: 7px;
-  background: #0cc400;
-  border: 2px solid white;
-  border-radius: 50%;
-}
-/* Dropdown */
-.profile-menu {
-  position: absolute;
-  right: 0;
-  top: 40px;
-  width: 150px;
-  background: white;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
-  border-radius: 8px;
-  padding: 8px;
-  z-index: 10;
+.bt-menu-item:hover {
+  background: #f4f0ff;
 }
 
-.email-text {
-  font-size: 11px;
-  color: #444;
-  padding: 6px 8px;
-  border-bottom: 1px solid #eee;
-  margin-bottom: 6px;
-}
-
-.menu-item {
-  width: 100%;
-  text-align: left;
-  padding: 6px 8px;
-  border: none;
-  background: none;
-  font-size: 13px;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-.menu-item:hover {
-  background: #f2e8ff;
-}
-
-/* =======================================
-   RESPONSIVE BREAKPOINTS
-========================================= */
-
-/* Tablets (max-width: 900px) */
-@media (max-width: 900px) {
-  .title-box h2 {
-    font-size: 14px;
-  }
-
-  .level-box {
-    padding: 4px 8px;
-    font-size: 10px;
-  }
-
-  .profile-circle {
-    width: 30px;
-    height: 30px;
-    font-size: 13px;
-  }
-}
-
-/* Mobile (max-width: 600px) */
-@media (max-width: 600px) {
-  .header-container {
-    height: 46px;
-    padding: 5px 10px;
-  }
-
-  .title-box h2 {
-    font-size: 13px;
-  }
-
-  .title-box p {
-    font-size: 9px;
-  }
-
-  .logo-icon {
-    width: 20px;
-    height: 20px;
-  }
-
-  .level-box {
-    display: none; /* hides level on small devices */
-  }
-
-  .profile-circle {
-    width: 28px;
-    height: 28px;
-    font-size: 12px;
-  }
-}
-
-/* Extra Small (max-width: 400px) */
-@media (max-width: 400px) {
-  .title-box h2 {
-    font-size: 12px;
-  }
-
-  .header-right {
-    gap: 8px;
-  }
+.bt-menu-item.logout {
+  color: #e11d48;
 }

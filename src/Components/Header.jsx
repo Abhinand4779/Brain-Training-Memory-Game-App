@@ -1,66 +1,73 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./Header.css";
-import LoginPage from "../Pages/LoginPage";
+import { useNavigate } from "react-router-dom";
+
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const userEmail = localStorage.getItem("userEmail") || "user@example.com";
+  const userEmail = localStorage.getItem("userEmail") || "j@example.com";
   const firstLetter = userEmail.charAt(0).toUpperCase();
   const menuRef = useRef(null);
+
+  const navigate = useNavigate();
+
   useEffect(() => {
-    function handleClickOutside(event) {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
+    const handleClickOutside = (e) => {
+      if (menuRef.current && !menuRef.current.contains(e.target)) {
         setMenuOpen(false);
       }
-    }
+    };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
-  const handleSignOut = () => {
-    localStorage.clear();
-    window.location.href = "/login";
-  };
+
   return (
-    <div className="header-container">
-      <div className="header-left">
-        <div className="logo-box">
+    <header className="bt-header">
+      {/* LEFT */}
+      <div className="bt-header-left">
+        <div className="bt-logo-box">
           <img
             src="src/assets/brainimg.png"
-            alt="brain icon"
-            className="logo-icon"
+            alt="Brain"
+            className="bt-logo-img"
           />
         </div>
-        <div className="title-box">
-          <h2>Brain Training</h2>
-          <p>Elevate your mind</p>
+
+        <div className="bt-title-box">
+          <h2 className="bt-title">Brain Training</h2>
+          <p className="bt-subtitle">Elevate your mind</p>
         </div>
       </div>
-      <div className="header-right">
-        <div className="level-box">
-          <span className="icon">🏅</span>
-          <span className="level-text">Level 1</span>
-          <span className="divider"></span>
-          <span className="points-text">0 pts</span>
+
+      {/* RIGHT */}
+      <div className="bt-header-right">
+        <div className="bt-level-pill">
+          <span className="bt-trophy">🏅</span>
+          <span>Level 1</span>
+          <span className="bt-separator">|</span>
+          <span>0 pts</span>
         </div>
-        <div className="profile-wrapper" ref={menuRef}>
+
+        <div className="bt-avatar-wrapper" ref={menuRef}>
+          {menuOpen && (
+  <div className="bt-profile-menu">
+    <p className="bt-email">{userEmail}</p>
+    <button className="bt-menu-item"  onClick={() => {
+        setMenuOpen(false);
+        navigate("/settings");
+      }}>Settings</button>
+    <button className="bt-menu-item logout">Sign Out</button>
+  </div>
+)}
           <div
-            className="profile-circle"
+            className="bt-avatar"
             onClick={() => setMenuOpen(!menuOpen)}
           >
             {firstLetter}
           </div>
-          <div className="online-dot"></div>
-          {menuOpen && (
-            <div className="profile-menu">
-              <p className="email-text">{userEmail}</p>
-              <button className="menu-item" onClick={<LoginPage />}>Settings</button>
-              <button className="menu-item" onClick={handleSignOut}>
-                Sign Out
-              </button>
-            </div>
-          )}
+          <span className="bt-online-dot"></span>
         </div>
       </div>
-    </div>
+    </header>
   );
 }

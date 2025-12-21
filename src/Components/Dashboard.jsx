@@ -14,102 +14,96 @@ export default function Dashboard() {
     day: "numeric",
   });
 
-  function handleStartChallenge() {
-    navigate("/game");
-  }
-
   return (
-    <div>
+    <>
       <Header />
 
-      <div className="dashboard">
-        {/* Top Header */}
-        <div className="top-header">
-          <div>
-            <p className="date-text">{formattedDate}</p>
-            <h2 className="welcome">Welcome Back! 👋</h2>
-            <p className="sub-texts">Ready to train your brain today?</p>
+      <div className="dashboard-container">
+        {/* TOP BANNER */}
+        <div className="dashboard-hero">
+          <div className="hero-left">
+            <p className="hero-date">{formattedDate}</p>
+            <h2 className="hero-title">Welcome Back! 👋</h2>
+            <p className="hero-sub">Ready to train your brain today?</p>
           </div>
 
-          <div className="stats-box">
-            <div className="stat">
-              <p className="stat-num">0</p>
-              <p className="stat-label">Day Streak</p>
+          <div className="hero-stats">
+            <div className="hero-stat">
+              <h3>0</h3>
+              <span>Day Streak</span>
             </div>
-            <div className="stat">
-              <p className="stat-num">30</p>
-              <p className="stat-label">Brain Age</p>
+            <div className="hero-stat">
+              <h3>30</h3>
+              <span>Brain Age</span>
             </div>
           </div>
         </div>
 
         {/* MAIN GRID */}
-        <div className="main-grid">
-          {/* Daily Challenge */}
-          <div className="daily-card">
-            <h3 className="section-title">Today's Challenge</h3>
-            <p className="section-sub">
-              Complete 5 games to maintain your streak and earn rewards.
-            </p>
+        <div className="dashboard-grid">
+          {/* DAILY CHALLENGE */}
+          <div className="card daily-challenge">
+            <h3>Today's Challenge</h3>
+            <p>Complete 5 games to maintain your streak and earn rewards.</p>
 
-            <div className="games-row">
-              <div className="game-box">🃏</div>
-              <div className="game-box">🔢</div>
-              <div className="game-box">🎨</div>
-              <div className="game-box">👤</div>
-              <div className="game-box">📝</div>
+            <div className="game-grid">
+              <div className="game-tile">🃏</div>
+              <div className="game-tile">🔢</div>
+              <div className="game-tile">🎨</div>
+              <div className="game-tile">👤</div>
+              <div className="game-tile">📝</div>
             </div>
 
-            <button className="start-btn" onClick={handleStartChallenge}>
+            <button
+              className="primary-btn"
+              onClick={() => navigate("/game")}
+            >
               ⚡ Start Daily Challenge →
             </button>
           </div>
 
-          {/* Right Section */}
-          <div className="right-section">
-            <div className="level-card">
-              <h3>Current Level</h3>
-              <p className="level-num">Level 1</p>
+          {/* RIGHT PANEL */}
+          <div className="side-panel">
+            <div className="card level-card">
+              <h4>Current Level</h4>
+              <h2>Level 1</h2>
 
-              <div className="progress">
+              <div className="progress-bar">
                 <div className="progress-fill"></div>
               </div>
 
-              <p className="points">0 / 2000 pts</p>
+              <span>0 / 2000 pts</span>
             </div>
 
-            <div className="quick-stats">
-              <h3>Quick Stats</h3>
+            <div className="card quick-stats">
+              <h4>Quick Stats</h4>
               <p>Games Played: 0</p>
               <p>Avg Accuracy: 0%</p>
               <p>Best Streak: 0 days</p>
             </div>
           </div>
         </div>
-       
 
-        {/* Bottom Section */}
-        <div className="bottom-wrapper">
-          <div className="achievements">
+        {/* BOTTOM GRID */}
+        <div className="dashboard-bottom">
+          <div className="card achievements">
             <h3>Recent Achievements</h3>
-            <div className="no-achievements">
-              <p>No achievements unlocked yet 😔</p>
-              <p>Complete challenges to earn rewards!</p>
-            </div>
+            <p className="muted">No achievements unlocked yet</p>
+            <p className="muted">Complete challenges to earn rewards!</p>
           </div>
 
-          <div className="activity">
+          <div className="card activity">
             <h3>Activity Summary</h3>
-            <p className="week">This Week</p>
-            <p className="week-value">0 Games Completed</p>
+            <p className="muted">This Week</p>
+            <h4>0 Games Completed</h4>
 
-            <div className="activity-stats">
-              <div className="activity-card">0 Points</div>
-              <div className="activity-card">0 Achievements</div>
+            <div className="activity-box">
+              <div>0 Points</div>
+              <div>0 Achievements</div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

@@ -102,7 +102,7 @@
   color: #333;
 }
 
-.back-btn:hover {
+.back-btnn:hover {
   border-color: #bbb;
   background: #f7f7f7;
 }
@@ -131,7 +131,7 @@
   }
 
   .start-btn,
-  .back-btn {
+  .back-btnn {
     font-size: 15px;
 
   }

@@ -30,7 +30,7 @@ export default function DailyGoal() {
           ))}
         </div>
         <div className="buttons">
-          <button className="back-btn" onClick={() => navigate("/welcome")}>
+          <button className="back-btni" onClick={() => navigate("/welcome")}>
             Back
           </button>
           <button className="continue-btn" onClick={handleContinue}>

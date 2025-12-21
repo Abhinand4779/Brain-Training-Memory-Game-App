@@ -1,17 +1,14 @@
 import React from "react";
 import Sidebar from "./Sidebar";
 import { Outlet } from "react-router-dom";
+import "./DashboardLayout.css";
 
 export default function DashboardLayout() {
   return (
-    <div style={
-      { display: "flex"
-       }
-      }>
+    <div className="dashboard-layout">
       <Sidebar />
-      <div style={
-        { flex: 1, padding: "20px" }
-        }>
+
+      <div className="dashboard-content">
         <Outlet />
       </div>
     </div>

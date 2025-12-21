@@ -1,73 +1,106 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Statitics.css";
 import Header from "../Components/Header";
 
-const StatsDashboard = () => {
+const Statistics = () => {
+  const navigate = useNavigate();
+
   const stats = {
-  totalTime: "0m",
-  avgAccuracy: "0%",
-  perfectGames: 0,
-  bestStreak: 0,
-  gameTypes: [
-    { name: "Card Matching", played: 0, avg: "0%" },
-    { name: "Number Sequence", played: 0, avg: "0%" },
-    { name: "Pattern Recognition", played: 0, avg: "0%" },
-    { name: "Name & Face", played: 0, avg: "0%" },
-    { name: "Word List", played: 0, avg: "0%" },
-  ],
-  noGamesPlayed: true,
-};
+    totalTime: "0m",
+    avgAccuracy: 0,
+    perfectGames: 0,
+    bestStreak: 0,
+    gameTypes: [
+      { name: "Card Matching", played: 0, avg: 0 },
+      { name: "Number Sequence", played: 0, avg: 0 },
+      { name: "Pattern Recognition", played: 0, avg: 0 },
+      { name: "Name & Face", played: 0, avg: 0 },
+      { name: "Word List", played: 0, avg: 0 },
+    ],
+  };
+
   return (
-    <div className="stats-dashboard">
-      <Header/>
-      <header className="stats-header">
-        <h2>Statitics</h2><br />
-        <p>Detailed performance metrics</p>
-      </header>
-      <section className="overview-cards">
-        <div className="cards">
-          <div className="card-title">Total Time</div>
-          <div className="card-value">{stats.totalTime}</div>
-          <div className="card-subtext">Training time</div>
+    <div className="statistics-page">
+      <Header />
+
+      {/* PAGE HEADER */}
+      <div className="page-header">
+        <button className="back-btn" onClick={() => navigate(-1)}>
+          ← Back
+        </button>
+
+        <div className="header-text">
+          <h2>Statistics</h2>
+          <p>Detailed performance metrics</p>
         </div>
-        <div className="cards">
-          <div className="card-title">Avg Accuracy</div>
-          <div className="card-value">{stats.avgAccuracy}</div>
-          <div className="card-subtext">Overall performance</div>
-        </div>
-        <div className="cards">
-          <div className="card-title">Perfect Games</div>
-          <div className="card-value">{stats.perfectGames}</div>
-          <div className="card-subtext">100% accuracy</div>
-        </div>
-        <div className="cards">
-          <div className="card-title">Best Streak</div>
-          <div className="card-value">{stats.bestStreak}</div>
-          <div className="card-subtext">Days in a row</div>
-        </div>
-      </section>
-      <section className="game-type-section">
+      </div>
+      {/* OVERVIEW CARDS */}
+      <div className="stats-grid">
+        <StatCard title="Total Time" value={stats.totalTime} subtitle="Training time" />
+        <StatCard title="Avg Accuracy" value={`${stats.avgAccuracy}%`} subtitle="Overall performance" />
+        <StatCard title="Perfect Games" value={stats.perfectGames} subtitle="100% accuracy" />
+        <StatCard title="Best Streak" value={stats.bestStreak} subtitle="Days in a row" />
+      </div>
+
+      {/* PERFORMANCE BY GAME TYPE */}
+      <section className="section">
         <h3>Performance by Game Type</h3>
-        <div className="game-type-list">
-          {stats.gameTypes.map((gt) => (
-            <div key={gt.name} className="game-type-row">
-              <div className="game-type-name">{gt.name}</div>
-              <div className="game-type-stats">
-                {gt.played} played · {gt.avg} avg
+
+        <div className="game-list">
+          {stats.gameTypes.map((game) => (
+            <div key={game.name} className="game-row">
+              <div className="game-info">
+                <span className="game-name">{game.name}</span>
+                <span className="game-meta">
+                  {game.played} played · {game.avg}%
+                </span>
               </div>
-              <div className="progress-bar">
-                <div className="progress-fill" style={{ width: "0%" }}></div>
-              </div>
+
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value={game.avg}
+                disabled
+                className="range-bar"
+              />
             </div>
           ))}
         </div>
+
+        <p className="empty-text">No games played yet</p>
       </section>
-      {stats.noGamesPlayed && (
-        <div className="no-games">
-          No games played yet
+
+      {/* LAST 7 DAYS */}
+      <section className="section">
+        <h3>Last 7 Days Activity</h3>
+        <div className="placeholder">No activity data yet</div>
+      </section>
+
+      {/* ACHIEVEMENTS */}
+      <section className="section">
+        <h3>Achievement Progress</h3>
+
+         <div className="achievement-grid">
+          <div className="achievement-card">🎯 <br /> <br />First Week Complete</div>
+          <div className="achievement-card">🧠 <br /> <br />Memory Master</div>
+          <div className="achievement-card">🔥 <br /> <br />Streak Warriorr</div>
+          <div className="achievement-card">⚡ <br /> <br />Speed Demon</div>
+          <div className="achievement-card">💪 <br /> <br />Brain Athlete</div>
+          <div className="achievement-card">✨ <br /> <br />Perfectionist</div>
         </div>
-      )}
+      </section>
     </div>
   );
 };
-export default StatsDashboard;
+
+const StatCard = ({ title, value, subtitle }) => (
+  <div className="stat-card">
+    <span className="card-title">{title}</span>
+    <h3 className="card-value">{value}</h3>
+    <span className="card-subtitle">{subtitle}</span>
+  </div>
+);
+
+export default Statistics;

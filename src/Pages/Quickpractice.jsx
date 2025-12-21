@@ -1,82 +1,115 @@
 import React from "react";
 import "./QuickPractice.css";
 import Header from "../Components/Header";
-import Dashboard from "../Components/Dashboard";
 
 export default function QuickPractice() {
   const games = [
     {
       title: "Card Matching",
-      desce: "Classic memory game that trains visual memory and concentration",
+      desc: "Classic memory game that trains visual memory and pattern recognition",
+      improve: "Improves visual recall and spatial memory",
       time: "5–7 min",
       skills: ["Visual Memory", "Concentration"],
-      color: "purple",
+      theme: "qp-theme-purple",
+      icon: "🃏",
     },
     {
       title: "Number Sequence",
-      desce: "Remember and repeat increasingly complex number sequences",
-      time: "3–6 min",
+      desc: "Remember and repeat increasingly complex number sequences",
+      improve: "Enhances working memory capacity",
+      time: "3–5 min",
       skills: ["Working Memory", "Processing Speed"],
-      color: "blue",
+      theme: "qp-theme-blue",
+      icon: "🔢",
     },
     {
       title: "Pattern Recognition",
-      desce: "Memorize and recreate visual patterns on a grid",
+      desc: "Memorize and recreate visual patterns on a grid",
+      improve: "Develops visual-spatial reasoning",
       time: "4–6 min",
       skills: ["Spatial Memory", "Visual Processing"],
-      color: "green",
+      theme: "qp-theme-green",
+      icon: "🎨",
     },
     {
       title: "Name & Face Memory",
-      desce: "Associate names with faces to improve social memory",
+      desc: "Associate names with faces to improve social memory",
+      improve: "Strengthens real-world memory skills",
       time: "6–8 min",
       skills: ["Social Memory", "Associative Learning"],
-      color: "orange",
+      theme: "qp-theme-orange",
+      icon: "👤",
     },
     {
       title: "Word List Recall",
-      desce: "Memorize and recall lists of words using memory strategies",
+      desc: "Memorize and recall lists of words using memory strategies",
+      improve: "Enhances everyday memory tasks",
       time: "5–7 min",
       skills: ["Verbal Memory", "Encoding Strategies"],
-      color: "pink",
+      theme: "qp-theme-pink",
+      icon: "📝",
     },
   ];
+
   return (
-    <div className="qp-container">
-      <Header/>
-      <button onClick={<Dashboard/>} className="back-btn">← Back</button>      
-      <h2 className="qp-title">Quick Practice</h2>
-      <p className="qp-subtitle">Choose a game to sharpen your skills</p>
-      <div className="qp-grid">
+    <div className="qp-wrapper"> 
+      <div className="qp-header">
+        <Header/>
+        <button className="qp-back-btn">← Back</button>
+
+        <div className="qp-header-text">
+          <h1>Quick Practice</h1>
+          <p>Choose a game to sharpen your skills</p>
+        </div>
+
+        <span className="qp-badge">✨ No streak penalty</span>
+      </div>
+
+      {/* Cards */}
+      <div className="qp-card-grid">
         {games.map((g, i) => (
-          <div key={i} className={`qp-card ${g.color}`}>
-            <h3>{g.title}</h3>
-            <p className="qp-desce">{g.desce}</p>
-            <p className="qp-time">⏱ {g.time}</p>
-            <div className="qp-skills">
-              {g.skills.map((s, idx) => (
-                <span key={idx}>{s}</span>
-              ))}
+          <div key={i} className={`qp-card ${g.theme}`}>
+            <div className="qp-card-top">
+              <div className="qp-card-icon">{g.icon}</div>
             </div>
-            <button className="qp-btn">Play Now</button>
+
+            <div className="qp-card-body">
+              <h3>{g.title}</h3>
+              <p className="qp-desc">{g.desc}</p>
+
+              <p className="qp-improve">✓ {g.improve}</p>
+
+              <div className="qp-time">⏱ {g.time}</div>
+
+              <div className="qp-skill-row">
+                {g.skills.map((s, idx) => (
+                  <span key={idx}>{s}</span>
+                ))}
+              </div>
+
+              <button className="qp-play-btn">▶ Play Now</button>
+            </div>
           </div>
         ))}
       </div>
+
+      {/* Bottom Info */}
       <div className="qp-bottom">
-        <div className="qp-tips">
-          <h4>Practice Tips</h4>
+        <div className="qp-info-box qp-tip-box">
+          <h4>💡 Practice Tips</h4>
           <ul>
-            <li>Practice regularly for best results.</li>
-            <li>Challenge yourself progressively.</li>
-            <li>Mix different game types to build overall cognitive fitness.</li>
+            <li>Practice regularly – consistency improves neuroplasticity</li>
+            <li>Increase difficulty gradually</li>
+            <li>Mix different games for balanced brain training</li>
           </ul>
         </div>
-        <div className="qp-facts">
-          <h4>Did You Know?</h4>
+
+        <div className="qp-info-box qp-fact-box">
+          <h4>🧠 Did You Know?</h4>
           <ul>
-            <li>Quick practice sessions don’t affect your streak.</li>
-            <li>Working memory can improve up to 35% with consistent training.</li>
-            <li>Your brain forms new connections while you sleep after practice.</li>
+            <li>Quick practice doesn’t affect your daily streak</li>
+            <li>Working memory can improve up to 30%</li>
+            <li>Your brain consolidates memory during sleep</li>
           </ul>
         </div>
       </div>
