@@ -50,15 +50,15 @@ export default function Header() {
 
         <div className="bt-avatar-wrapper" ref={menuRef}>
           {menuOpen && (
-  <div className="bt-profile-menu">
-    <p className="bt-email">{userEmail}</p>
-    <button className="bt-menu-item"  onClick={() => {
-        setMenuOpen(false);
-        navigate("/settings");
-      }}>Settings</button>
-    <button className="bt-menu-item logout">Sign Out</button>
-  </div>
-)}
+            <div className="bt-profile-menu">
+              <p className="bt-email">{userEmail}</p>
+              <button className="bt-menu-item" onClick={() => {
+                setMenuOpen(false);
+                navigate("/settings");
+              }}>Settings</button>
+              <button className="bt-menu-item logout">Sign Out</button>
+            </div>
+          )}
           <div
             className="bt-avatar"
             onClick={() => setMenuOpen(!menuOpen)}

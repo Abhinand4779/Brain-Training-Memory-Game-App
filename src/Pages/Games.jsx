@@ -128,7 +128,7 @@ function GamePattern() {
             key={i}
             className={
               (visible && correctPattern.includes(i)) ||
-              (!visible && chosen.includes(i))
+                (!visible && chosen.includes(i))
                 ? "rgm_pattern_active"
                 : "rgm_pattern_idle"
             }

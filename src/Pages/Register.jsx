@@ -32,7 +32,7 @@ const Register = () => {
           <img src="src/assets/brainimg.png" alt="Brain Logo" />
         </div>
         <h4>Create Account</h4>
-        <form onSubmit={handleSubmit}>          
+        <form onSubmit={handleSubmit}>
           <label>Full Name</label>
           <div className="input-group">
             <input

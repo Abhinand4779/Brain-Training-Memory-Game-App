@@ -7,7 +7,7 @@ const LoginPage = ({ setLo }) => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const  handleLogin = (event) => {
+  const handleLogin = (event) => {
     event.preventDefault();
     const savedUser = JSON.parse(localStorage.getItem("user"));
     if (!savedUser) {
@@ -58,9 +58,8 @@ const LoginPage = ({ setLo }) => {
           Don’t have an account?{" "}
           <Link to="/register">Create one for free</Link>
         </p>
-      </div>      
+      </div>
     </div>
   );
 };
 export default LoginPage;
-    

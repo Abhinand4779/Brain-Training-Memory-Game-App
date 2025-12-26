@@ -52,9 +52,9 @@ export default function QuickPractice() {
   ];
 
   return (
-    <div className="qp-wrapper"> 
+    <div className="qp-wrapper">
       <div className="qp-header">
-        <Header/>
+        <Header />
         <button className="qp-back-btn">← Back</button>
 
         <div className="qp-header-text">

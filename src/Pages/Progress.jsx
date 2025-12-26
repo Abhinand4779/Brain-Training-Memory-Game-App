@@ -67,7 +67,7 @@ export default function Progress() {
           <div className="progress-box">
             <h3>📈 7-Day Performance Trend</h3>
             <div className="progress-empty">
-              <span>📉</span>
+              <span>📈</span>
               <p>No data yet</p>
               <small>Complete some games to see your progress</small>
             </div>

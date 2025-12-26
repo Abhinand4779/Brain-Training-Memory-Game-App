@@ -6,6 +6,9 @@ import { FaBars, FaTimes } from "react-icons/fa";
 export default function Sidebar() {
   const [open, setOpen] = useState(false);
 
+  const getLinkClass = ({ isActive }) =>
+    isActive ? "menu-itemi active" : "menu-itemi";
+
   return (
     <>
       {/* MOBILE TOGGLE BUTTON */}
@@ -14,16 +17,24 @@ export default function Sidebar() {
       </button>
 
       {/* OVERLAY */}
-      {open && <div className="sidebar-overlay" onClick={() => setOpen(false)} />}
+      {open && (
+        <div
+          className="sidebar-overlay"
+          onClick={() => setOpen(false)}
+        />
+      )}
 
       {/* SIDEBAR */}
       <div className={`sidebar ${open ? "open" : ""}`}>
-        {/* CLOSE BUTTON (MOBILE) */}
-        <button className="sidebar-close" onClick={() => setOpen(false)}>
+        {/* CLOSE BUTTON */}
+        <button
+          className="sidebar-close"
+          onClick={() => setOpen(false)}
+        >
           <FaTimes />
         </button>
 
-        {/* FIXED TOP */}
+        {/* TOP SECTION */}
         <div className="sidebar-top">
           <div className="streak-card">
             <h2>🔥 0</h2>
@@ -35,31 +46,59 @@ export default function Sidebar() {
         <div className="sidebar-menu">
           <p className="menu-title">MAIN MENU</p>
 
-          <NavLink to="/dashboard" className="menu-itemi" onClick={() => setOpen(false)}>
+          <NavLink
+            to="/dashboard"
+            className={getLinkClass}
+            onClick={() => setOpen(false)}
+          >
             Dashboard
           </NavLink>
 
-          <NavLink to="/quickpractice" className="menu-itemi" onClick={() => setOpen(false)}>
+          <NavLink
+            to="/quickpractice"
+            className={getLinkClass}
+            onClick={() => setOpen(false)}
+          >
             Quick Practice
           </NavLink>
 
-          <NavLink to="/progress" className="menu-itemi" onClick={() => setOpen(false)}>
+          <NavLink
+            to="/progress"
+            className={getLinkClass}
+            onClick={() => setOpen(false)}
+          >
             Progress
           </NavLink>
 
-          <NavLink to="/statistics" className="menu-itemi" onClick={() => setOpen(false)}>
+          <NavLink
+            to="/statistics"
+            className={getLinkClass}
+            onClick={() => setOpen(false)}
+          >
             Statistics
           </NavLink>
 
-          <NavLink to="/achievements" className="menu-itemi" onClick={() => setOpen(false)}>
+          <NavLink
+            to="/achievements"
+            className={getLinkClass}
+            onClick={() => setOpen(false)}
+          >
             Achievements
           </NavLink>
 
-          <NavLink to="/about" className="menu-itemi" onClick={() => setOpen(false)}>
+          <NavLink
+            to="/about"
+            className={getLinkClass}
+            onClick={() => setOpen(false)}
+          >
             About & Info
           </NavLink>
 
-          <NavLink to="/settings" className="menu-itemi" onClick={() => setOpen(false)}>
+          <NavLink
+            to="/settings"
+            className={getLinkClass}
+            onClick={() => setOpen(false)}
+          >
             Settings
           </NavLink>
         </div>

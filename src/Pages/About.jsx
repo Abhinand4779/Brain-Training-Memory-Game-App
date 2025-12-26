@@ -27,7 +27,6 @@ export default function BrainTraining() {
   return (
     <div className="brain-wrapper">
       <Header />
-
       <div className="header-section">
         <h2>Scientifically-Backed Brain Training</h2>
         <p>
@@ -35,22 +34,20 @@ export default function BrainTraining() {
           research and proven techniques to help improve cognitive abilities.
         </p>
       </div>
-
       <div className="tabs">
-        {["overview", "science", "games", "faq"].map((tab) => (
+        {["overview","science","games","faq"].map((tab) => (
           <button
             key={tab}
             className={`tab-btn ${activeTab === tab ? "active" : ""}`}
             onClick={() => setActiveTab(tab)}
           >
-            {tab === "overview" && "Overview"}
-            {tab === "science" && "The Science"}
-            {tab === "games" && "Games"}
-            {tab === "faq" && "FAQ"}
+            {tab === "overview"&&"Overview"}
+            {tab === "science"&&"The Science"}
+            {tab === "games"&&"Games"}
+            {tab === "faq"&&"FAQ"}
           </button>
         ))}
       </div>
-
       <div className="content">
         {renderTabContent()}
       </div>

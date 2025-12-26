@@ -37,10 +37,10 @@ const Statistics = () => {
       </div>
       {/* OVERVIEW CARDS */}
       <div className="stats-grid">
-        <StatCard title="Total Time" value={stats.totalTime} subtitle="Training time" />
-        <StatCard title="Avg Accuracy" value={`${stats.avgAccuracy}%`} subtitle="Overall performance" />
-        <StatCard title="Perfect Games" value={stats.perfectGames} subtitle="100% accuracy" />
-        <StatCard title="Best Streak" value={stats.bestStreak} subtitle="Days in a row" />
+        <StatCard title="📝 Total Time" value={stats.totalTime} subtitle="Training time" />
+        <StatCard title="🔢 Avg Accuracy" value={`${stats.avgAccuracy}%`} subtitle="Overall performance" />
+        <StatCard title="⚡ Perfect Games" value={stats.perfectGames} subtitle="100% accuracy" />
+        <StatCard title="📅 Best Streak" value={stats.bestStreak} subtitle="Days in a row" />
       </div>
 
       {/* PERFORMANCE BY GAME TYPE */}

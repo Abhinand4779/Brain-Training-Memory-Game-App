@@ -90,7 +90,7 @@ export default function NeuroscienceSection() {
           <span>Trained by: Name & Face Memory, Word List Recall</span>
         </div>
 
-        <div className="domain-item domain-highlight">
+        <div className="domain-item">
           <h4>⚡ Processing Speed</h4>
           <p>
             The rate at which you can take in, understand, and respond to

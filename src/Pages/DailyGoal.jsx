@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./DailyGoal.css"; 
+import "./DailyGoal.css";
 
 export default function DailyGoal() {
   const navigate = useNavigate();
   const [selectedTime, setSelectedTime] = useState(10);
 
   const handleContinue = () => {
-   
+
     localStorage.setItem("dailyGoal", selectedTime);
-    navigate("/focus"); 
+    navigate("/focus");
   };
 
   return (

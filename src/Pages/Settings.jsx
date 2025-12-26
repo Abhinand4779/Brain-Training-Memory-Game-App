@@ -11,7 +11,7 @@ const Settings = () => {
 
   return (
     <div className="settings-container">
-      <Header/>
+      <Header />
       <header className="settings-header">
         <button className="back-btn">← Back</button>
         <div className="header-text">
@@ -40,11 +40,11 @@ const Settings = () => {
             <small>Email cannot be changed in demo mode</small>
           </div>
           <div className="profile-summary">
-             <div className="avatar-circle">J</div>
-             <div className="summary-text">
-                <span className="summary-name">j</span>
-                <span className="summary-email">j@gmail.com</span>
-             </div>
+            <div className="avatar-circle">J</div>
+            <div className="summary-text">
+              <span className="summary-name">j</span>
+              <span className="summary-email">j@gmail.com</span>
+            </div>
           </div>
         </section>
 
@@ -57,12 +57,12 @@ const Settings = () => {
               <p>Customize your training experience</p>
             </div>
           </div>
-          
+
           <label className="field-label">Daily Goal (minutes)</label>
           <div className="goal-row">
             {[5, 10, 15].map(time => (
-              <div 
-                key={time} 
+              <div
+                key={time}
                 className={`goal-item ${dailyGoal === time ? 'active' : ''}`}
                 onClick={() => setDailyGoal(time)}
               >
@@ -73,8 +73,8 @@ const Settings = () => {
           </div>
 
           <label className="field-label">Difficulty Setting</label>
-          <div 
-            className={`select-option ${difficulty === 'Adaptive' ? 'selected' : ''}`} 
+          <div
+            className={`select-option ${difficulty === 'Adaptive' ? 'selected' : ''}`}
             onClick={() => setDifficulty('Adaptive')}
           >
             <div className="option-info">
@@ -84,8 +84,8 @@ const Settings = () => {
             {difficulty === 'Adaptive' && <span className="blue-check">✓</span>}
           </div>
 
-          <div 
-            className={`select-option ${difficulty === 'Manual' ? 'selected' : ''}`} 
+          <div
+            className={`select-option ${difficulty === 'Manual' ? 'selected' : ''}`}
             onClick={() => setDifficulty('Manual')}
           >
             <div className="option-info">
@@ -99,9 +99,9 @@ const Settings = () => {
           {difficulty === 'Manual' && (
             <div className="manual-dropdown-container">
               <label className="field-label">Manual Difficulty Level</label>
-              <select 
-                className="difficulty-select" 
-                value={manualLevel} 
+              <select
+                className="difficulty-select"
+                value={manualLevel}
                 onChange={(e) => setManualLevel(e.target.value)}
               >
                 <option value="Easy - Beginner friendly">Easy - Beginner friendly</option>
@@ -145,8 +145,8 @@ const Settings = () => {
             { id: 'Attention', title: 'Attention', sub: 'Focus and concentration', icon: '🎯', color: 'red' },
             { id: 'Problem Solving', title: 'Problem Solving', sub: 'Logical thinking abilities', icon: '💡', color: 'yellow' }
           ].map(area => (
-            <div 
-              key={area.id} 
+            <div
+              key={area.id}
               className={`focus-item ${focusArea === area.id ? `active-${area.color}` : ''}`}
               onClick={() => setFocusArea(area.id)}
             >

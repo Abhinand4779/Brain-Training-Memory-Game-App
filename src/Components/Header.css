@@ -36,7 +36,7 @@
 }
 
 .bt-logo-img {
-  width: 100px;                  /* 🔥 reduce size */
+  width: 100px;                  
   height: 70px;
 }
 
@@ -126,7 +126,7 @@
   .bt-title-box {
     max-width: 140px;       /* 🔥 prevents overlap */
     overflow: hidden;
-    text-overflow: ellipsis;          /* hide text on mobile */
+    text-overflow: ellipsis;          
   }
 
   .bt-header-left {
@@ -137,7 +137,7 @@
 
 @media (max-width: 768px) {
   .bt-subtitle {
-    font-size: 11px;        /* compact subtitle */
+    font-size: 11px;       
     line-height: 1;
     opacity: 0.7;
   }

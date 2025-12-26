@@ -1,11 +1,11 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";   
+import { useNavigate } from "react-router-dom";
 import "./Welcome.css";
 
 export default function Welcome() {
-  const navigate = useNavigate();   
+  const navigate = useNavigate();
   const handleStart = () => {
-    navigate("/dailygoal");         
+    navigate("/dailygoal");
   };
   return (
     <div className="welcome-container">
@@ -16,13 +16,13 @@ export default function Welcome() {
         </div>
         <h2>Welcome to Brain Training</h2>
         <p className="subtitle">
-          Train your mind with fun, scientifically-backed exercises designed to 
+          Train your mind with fun, scientifically-backed exercises designed to
           improve memory, focus, and cognitive abilities.
         </p>
         <div className="info-box">
           <p>
             Our program is based on cognitive neuroscience research and proven techniques.
-            Just <strong>5–15 minutes a day</strong> of consistent practice can lead to 
+            Just <strong>5–15 minutes a day</strong> of consistent practice can lead to
             measurable improvements in mental performance.
           </p>
         </div>
