@@ -1,0 +1,166 @@
+/* PAGE WRAPPER */
+.achv-page {
+  padding: 28px;
+  background: #f6f8ff;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+/* TOP HEADER */
+.achv-top {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 20px; /* pushes below main header */
+  margin-bottom: 26px;
+}
+
+.achv-back {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.achv-title-wrap h2 {
+  margin: 0;
+}
+
+.achv-title-wrap p {
+  margin: 2px 0 0;
+  font-size: 14px;
+  color: #777;
+}
+
+/* SUMMARY CARD */
+.achv-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff7e5;
+  border: 1px solid #f3ddaa;
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 32px;
+}
+
+.achv-summary-left {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.achv-trophy {
+  background: orange;
+  color: white;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+}
+
+.achv-summary-right {
+  text-align: right;
+}
+
+.achv-progress-bar {
+  width: 180px;
+  height: 8px;
+  background: #ffe6bf;
+  border-radius: 20px;
+  margin: 6px 0;
+}
+
+.achv-progress-fill {
+  width: 0%;
+  height: 100%;
+  background: orange;
+  border-radius: 20px;
+}
+
+.achv-progress-percent {
+  font-size: 13px;
+  color: #777;
+}
+
+/* SECTION TITLES */
+.achv-section {
+  font-size: 18px;
+  margin: 24px 0 14px;
+}
+
+/* ACHIEVEMENT CARD */
+.achv-card {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  gap: 14px;
+  margin-bottom: 14px;
+  transition: 0.2s ease;
+}
+
+.achv-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.achv-locked {
+  opacity: 0.55;
+}
+
+.achv-icon {
+  font-size: 26px;
+}
+
+.achv-card h4 {
+  margin: 0;
+}
+
+.achv-card p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.achv-card small {
+  font-size: 12px;
+  color: #777;
+}
+
+/* GRID */
+.achv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .achv-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .achv-summary {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .achv-summary-right {
+    text-align: left;
+    width: 100%;
+  }
+
+  .achv-progress-bar {
+    width: 100%;
+  }
+}

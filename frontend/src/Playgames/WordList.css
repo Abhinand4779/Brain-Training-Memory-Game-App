@@ -1,0 +1,141 @@
+.wlr-wrapper {
+  min-height: 100vh;
+  background: #f7f8ff;
+  padding: 24px;
+  font-family: "Inter", sans-serif;
+}
+
+.wlr-header {
+  max-width: 920px;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wlr-header h2 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.wlr-header p {
+  margin: 4px 0 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.exit-btn {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 6px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.wlr-stats {
+  max-width: 920px;
+  margin: 0 auto 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.stat {
+  background: white;
+  border-radius: 16px;
+  padding: 18px;
+  text-align: center;
+}
+
+.stat span {
+  display: block;
+  font-size: 14px;
+  color: #777;
+}
+
+.stat strong {
+  font-size: 22px;
+  margin-top: 6px;
+  display: block;
+}
+
+.wlr-card {
+  max-width: 920px;
+  margin: auto;
+  background: white;
+  border-radius: 20px;
+  padding: 36px;
+}
+
+.category {
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+}
+
+.subtitle {
+  text-align: center;
+  margin: 14px 0 26px;
+  color: #444;
+}
+
+.word-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.word-box {
+  background: #f2f3ff;
+  border-radius: 14px;
+  padding: 16px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.input-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px 24px;
+}
+
+.input-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-item input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: #f4f4f4;
+  outline: none;
+}
+
+.submit-btn {
+  margin-top: 28px;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(90deg, #a855f7, #3b82f6);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .word-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .input-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wlr-stats {
+    grid-template-columns: 1fr;
+  }
+}

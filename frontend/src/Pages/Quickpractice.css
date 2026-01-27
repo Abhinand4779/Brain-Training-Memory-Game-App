@@ -1,0 +1,218 @@
+.qp-wrapper {
+  background: #f6f7ff;
+  padding: 50px 40px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header */
+.qp-header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.qp-back-btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.qp-header-text h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.qp-header-text p {
+  margin: 4px 0 0;
+  color: #6c6c6c;
+  font-size: 14px;
+}
+
+.qp-badge {
+  background: #f0ecff;
+  color: #7a4dff;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+/* Grid */
+.qp-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+/* Card */
+.qp-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card Top */
+.qp-card-top {
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qp-card-icon {
+  width: 64px;
+  height: 64px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+/* Card Body */
+.qp-card-body {
+  padding: 20px;
+}
+
+.qp-card-body h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.qp-desc {
+  font-size: 14px;
+  color: #555;
+}
+
+.qp-improve {
+  font-size: 13px;
+  color: #7a3cff;
+  margin: 8px 0;
+}
+
+.qp-time {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+/* Skills */
+.qp-skill-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.qp-skill-row span {
+  background: #f1f1f1;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* Button */
+.qp-play-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+}
+
+/* Themes */
+.qp-theme-purple .qp-card-top {
+  background: linear-gradient(135deg, #b14cff, #7b00ff);
+}
+.qp-theme-purple .qp-play-btn {
+  background: #7b00ff;
+}
+
+.qp-theme-blue .qp-card-top {
+  background: linear-gradient(135deg, #4b8bff, #0b57ff);
+}
+.qp-theme-blue .qp-play-btn {
+  background: #0b57ff;
+}
+
+.qp-theme-green .qp-card-top {
+  background: linear-gradient(135deg, #1fd273, #00a85a);
+}
+.qp-theme-green .qp-play-btn {
+  background: #00a85a;
+}
+
+.qp-theme-orange .qp-card-top {
+  background: linear-gradient(135deg, #ff7a00, #ff4d00);
+}
+.qp-theme-orange .qp-play-btn {
+  background: #ff5a00;
+}
+
+.qp-theme-pink .qp-card-top {
+  background: linear-gradient(135deg, #ff4fa3, #d6006f);
+}
+.qp-theme-pink .qp-play-btn {
+  background: #d6006f;
+}
+
+/* Bottom Section */
+.qp-bottom {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.qp-info-box {
+  padding: 20px;
+  border-radius: 14px;
+  font-size: 14px;
+}
+
+.qp-tip-box {
+  background: #f4f1ff;
+  border: 1px solid #ded7ff;
+}
+
+.qp-fact-box {
+  background: #ecfff4;
+  border: 1px solid #c8f3da;
+}
+
+.qp-info-box h4 {
+  margin-bottom: 10px;
+}
+
+.qp-info-box ul {
+  padding-left: 18px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .qp-wrapper {
+    padding: 20px;
+  }
+
+  .qp-header {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .qp-badge {
+    align-self: flex-start;
+  }
+}

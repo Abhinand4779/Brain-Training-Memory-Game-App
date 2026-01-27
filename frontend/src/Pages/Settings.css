@@ -1,0 +1,339 @@
+/* Variables for consistency */
+:root {
+  --primary-purple: #7c3aed;
+  --primary-blue: #3b82f6;
+  --bg-light: #f8faff;
+  --border-color: #e2e8f0;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --success-green: #22c55e;
+  --focus-orange: #f97316;
+}
+
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-light);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+.settings-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Header Section */
+.settings-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.back-btn {
+  padding: 8px 16px;
+  border: 1px solid var(--border-color);
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.back-btn:hover {
+  background: #f1f5f9;
+}
+
+.header-text h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.header-text p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Responsive Grid Layout */
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns for desktop */
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.settings-card {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card Header Icons */
+.card-title {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.profile-icon { background: #9333ea; }
+.training-icon { background: var(--primary-blue); }
+.pref-icon { background: var(--success-green); }
+
+/* Form Elements */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label, .field-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-main);
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  background: #f1f5f9; /* Grayed out look from image */
+  font-size: 0.9rem;
+}
+
+.input-group small {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Profile Badge (Bottom of Profile Card) */
+.profile-summary {
+  margin-top: auto;
+  padding: 16px;
+  background: #f5f3ff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar-circle {
+  width: 40px;
+  height: 40px;
+  background: var(--primary-blue);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.summary-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.summary-name { font-weight: 600; font-size: 0.9rem; }
+.summary-email { font-size: 0.8rem; color: var(--primary-purple); }
+
+/* Goal Selection Boxes */
+.goal-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.goal-item {
+  flex: 1;
+  text-align: center;
+  padding: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.goal-item.active {
+  border: 2px solid var(--primary-blue);
+  background: #eff6ff;
+}
+
+.goal-num { display: block; font-size: 1.4rem; font-weight: 700; }
+.goal-sub { font-size: 0.75rem; color: var(--text-muted); }
+
+/* Selectable Options (Difficulty & Focus) */
+.select-option, .focus-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: border 0.2s;
+}
+
+.select-option.selected {
+  border: 2px solid var(--primary-blue);
+  background: #eff6ff;
+}
+
+.option-info strong { display: block; font-size: 0.95rem; }
+.option-info span { font-size: 0.8rem; color: var(--text-muted); }
+
+.blue-check {
+  background: var(--primary-blue);
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+/* Manual Mode Dropdown */
+.manual-dropdown-container {
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--border-color);
+}
+
+.difficulty-select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--primary-blue);
+  background: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Focus Area Specific Colors */
+.focus-icon-img { font-size: 1.5rem; margin-right: 12px; }
+
+.active-orange { border: 2px solid var(--focus-orange); background: #fff7ed; }
+.orange-dot {
+  background: var(--focus-orange);
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+/* Toggle Switch Styling */
+.toggle-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.switch input { opacity: 0; width: 0; height: 0; }
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px; width: 18px;
+  left: 3px; bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider { background-color: #1e293b; }
+input:checked + .slider:before { transform: translateX(20px); }
+
+/* Footer Actions */
+.footer-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.btn-cancel {
+  padding: 12px 24px;
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-save {
+  padding: 12px 24px;
+  background: var(--primary-purple);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 900px) {
+  .settings-grid {
+    grid-template-columns: 1fr; /* Stack cards vertically on tablets/mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .settings-container { padding: 20px 10px; }
+  .goal-row { flex-direction: column; } /* Stack 5/10/15 min vertically on tiny screens */
+  .footer-actions { flex-direction: column; }
+  .btn-save, .btn-cancel { width: 100%; }
+}

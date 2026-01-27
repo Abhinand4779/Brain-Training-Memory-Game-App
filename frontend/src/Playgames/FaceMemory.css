@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(#f8f7ff, #eef2ff);
+}
+
+.nf-page {
+  max-width: 1000px;
+  margin: auto;
+  padding: 24px;
+}
+
+/* HEADER */
+.nf-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nf-header h2 {
+  margin: 0;
+}
+
+.nf-header p {
+  margin-top: 4px;
+  color: #666;
+}
+
+.exit-btn {
+  padding: 8px 18px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* CARD */
+.nf-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 32px;
+  margin-top: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.nf-instruction {
+  margin-bottom: 24px;
+  color: #555;
+}
+
+/* PEOPLE GRID */
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.person-card {
+  background: #f6f7ff;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.avatar {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.person-card h4 {
+  margin: 8px 0 4px;
+}
+
+.person-card span {
+  color: #666;
+}
+
+/* STATS */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+.stat-card span {
+  font-size: 14px;
+  color: #777;
+}
+
+/* QUESTION */
+.question-face {
+  margin-bottom: 24px;
+}
+
+.avatar.big {
+  font-size: 70px;
+}
+
+.role {
+  color: #666;
+  margin-top: 8px;
+}
+
+/* OPTIONS */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.option-btn {
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.option-btn:hover {
+  background: linear-gradient(135deg, #c084fc, #60a5fa);
+  color: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .people-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}

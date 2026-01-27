@@ -1,0 +1,86 @@
+/* PAGE WRAPPER */
+.brain-wrapper {
+  padding: 20px;
+  background: #f6f7ff;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  margin-top: 30px;
+}
+
+/* HEADER CARD */
+.about-header-card {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 25px;
+  background: linear-gradient(90deg, #7b2fff, #c037ff);
+  border-radius: 16px;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.about-header-card h2 {
+  margin: 0 0 6px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.about-header-card p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+/* HEADER ICON */
+.header-icon {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TAB BAR */
+.tab-container {
+  display: flex;
+  background: #eeeeee;
+  border-radius: 25px;
+  padding: 6px;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+/* TAB BUTTON */
+.tab-pill {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 8px 0;
+  font-size: 14px;
+  cursor: pointer;
+  color: #555;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+/* ACTIVE TAB */
+.tab-pill.active {
+  background: #7b2fff;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* CONTENT */
+.content {
+  margin-top: 20px;
+}
+
+.page-topbar {
+  display: flex;
+  align-items: center;     /* vertical center */
+  gap: 12px;               /* space between button and heading */
+  margin-bottom: 16px;
+}

@@ -1,0 +1,107 @@
+.faq-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* FAQ CARD */
+.faq-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.faq-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.faq-header h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.faq-header svg {
+  color: #8b5cf6;
+}
+
+/* FAQ ITEM */
+.faq-item {
+  border-top: 1px solid #e5e7eb;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 14px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.faq-question svg {
+  transition: transform 0.3s;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  padding-bottom: 14px;
+  font-size: 13px;
+  color: #4b5563;
+}
+
+/* HEALTH CARD */
+.health-card {
+  background: #f0f7ff;
+  border-radius: 14px;
+  padding: 18px;
+  border: 1px solid #bfdbfe;
+}
+
+.health-card h3 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+.health-desc {
+  font-size: 13px;
+  margin-bottom: 14px;
+  color: #475569;
+}
+
+/* GRID */
+.health-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.health-item {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 13px;
+  border: 1px solid #e5e7eb;
+}
+
+.health-item p {
+  margin: 6px 0 0;
+  color: #555;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .health-grid {
+    grid-template-columns: 1fr;
+  }
+}

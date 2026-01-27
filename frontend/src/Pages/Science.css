@@ -1,0 +1,119 @@
+.neuro-wrapper {
+  padding: 24px;
+  background: #f6f8ff;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ---------- TOP CARD ---------- */
+.neuro-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.neuro-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.neuro-icon {
+  font-size: 22px;
+}
+
+.neuro-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.neuro-description {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.neuro-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.neuro-box {
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.neuro-box h4 {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+/* ---------- COLOR VARIANTS ---------- */
+.neuro-blue {
+  background: #eef4ff;
+  border: 1px solid #c6dbff;
+}
+
+.neuro-green {
+  background: #ecfff4;
+  border: 1px solid #b6f2cf;
+}
+
+.neuro-purple {
+  background: #f4edff;
+  border: 1px solid #d9c9ff;
+}
+
+.neuro-orange {
+  background: #fff4e8;
+  border: 1px solid #ffd7a8;
+}
+
+/* ---------- DOMAIN SECTION ---------- */
+.domain-card {
+  background: #eef4ff;
+  border-radius: 14px;
+  padding: 22px;
+}
+
+.domain-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.domain-item {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.domain-item h4 {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.domain-item p {
+  font-size: 13px;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+.domain-item span {
+  font-size: 12px;
+  color: #5b5bff;
+}
+
+.domain-highlight {
+  background: #f0fff6;
+  border: 1px solid #bff0d6;
+}

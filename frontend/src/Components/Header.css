@@ -1,0 +1,189 @@
+/* ===== HEADER POSITIONING ===== */
+.bt-header {
+  position: fixed;
+  top: 0;
+  left: 260px;                       /* ✅ MATCH SIDEBAR WIDTH */
+  width: calc(100% - 260px);         /* ✅ NO GAP */
+  height: 72px;
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 28px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+/* ===== LEFT ===== */
+.bt-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;  
+}
+
+.bt-logo-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; 
+}
+
+.bt-logo-img {
+  width: 100px;                  
+  height: 70px;
+}
+
+.bt-title-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.bt-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #7a3cff;
+}
+
+.bt-subtitle {
+  margin: 0;
+  font-size: 13px;
+  color: #9a9a9a;
+}
+
+/* ===== RIGHT ===== */
+.bt-header-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* LEVEL PILL */
+.bt-level-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f4f0ff;
+  padding: 8px 14px;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b35ff;
+}
+
+.bt-separator {
+  color: #b9a7ff;
+}
+
+/* AVATAR */
+.bt-avatar-wrapper {
+  position: relative;
+}
+
+.bt-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #9b5cff, #6f3cff);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.bt-online-dot {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 10px;
+  height: 10px;
+  background: #22c55e;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .bt-header {
+    left: 0;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .bt-header {
+    padding: 0 12px;
+  }
+
+  .bt-title-box {
+    max-width: 140px;       /* 🔥 prevents overlap */
+    overflow: hidden;
+    text-overflow: ellipsis;          
+  }
+
+  .bt-header-left {
+    gap: 8px;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .bt-subtitle {
+    font-size: 11px;       
+    line-height: 1;
+    opacity: 0.7;
+  }
+
+  .bt-level-pill {
+    display: none;
+  }
+}
+
+/* PROFILE MENU DROPDOWN */
+.bt-profile-menu {
+  position: absolute;
+  top: 52px;              /* BELOW AVATAR */
+  right: 0;
+  width: 220px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  padding: 10px;
+  z-index: 9999;          /* 🔥 MOST IMPORTANT */
+}
+
+/* EMAIL */
+.bt-email {
+  font-size: 13px;
+  color: #555;
+  margin: 8px 10px;
+  word-break: break-all;
+}
+
+/* MENU ITEMS */
+.bt-menu-item {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.bt-menu-item:hover {
+  background: #f4f0ff;
+}
+
+.bt-menu-item.logout {
+  color: #e11d48;
+}

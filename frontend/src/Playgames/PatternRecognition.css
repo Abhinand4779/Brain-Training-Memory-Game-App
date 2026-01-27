@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(#f8f7ff, #eef2ff);
+}
+
+.pattern-page {
+  max-width: 900px;
+  margin: auto;
+  padding: 24px;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.header p {
+  margin: 4px 0 0;
+  color: #666;
+}
+
+.exit-btn {
+  padding: 8px 18px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* STATS */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+.stat-card span {
+  color: #777;
+  font-size: 14px;
+}
+
+/* GAME CARD */
+.game-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.instruction {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  gap: 16px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.cell {
+  width: 80px;
+  height: 80px;
+  background: #e5e7eb;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cell.active {
+  background: linear-gradient(135deg, #c084fc, #60a5fa);
+}
+
+/* ACTIONS */
+.actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.actions button {
+  flex: 1;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.clear {
+  background: #f9fafb;
+  border: 1px solid #ddd;
+}
+
+.submit {
+  background: linear-gradient(135deg, #c084fc, #60a5fa);
+  color: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 65px);
+    gap: 12px;
+  }
+
+  .cell {
+    width: 65px;
+    height: 65px;
+  }
+}

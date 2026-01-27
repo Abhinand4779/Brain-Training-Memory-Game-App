@@ -1,0 +1,105 @@
+/* ================= CONTAINER ================= */
+.welcome-container {
+  width: 100%;
+  min-height: 100vh;
+  background: #f5f7ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* ================= CARD ================= */
+.welcomes-card {
+  background: white;
+  padding: 40px;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ================= LOGO ================= */
+.logo img {
+  width: 120px;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+/* ================= TEXT ================= */
+h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  margin-top: 10px;
+  color: #555;
+  font-size: 15px;
+}
+
+/* ================= INFO BOX ================= */
+.info-box {
+  background: #adcaf5;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin: 25px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+/* ================= FEATURES ================= */
+.features {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap; /* 🔥 responsive fix */
+}
+
+.feature-card {
+  flex: 1;
+  min-width: 160px;
+  background: #fbd8fb;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 14px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card .icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+/* ================= BUTTON ================= */
+.get-started-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #4c7ef3;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.get-started-btn:hover {
+  background: #3a68d9;
+}
+
+/* ================= MOBILE ONLY ================= */
+@media (max-width: 480px) {
+  .welcomes-card {
+    padding: 30px 20px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+}

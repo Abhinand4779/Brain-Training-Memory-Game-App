@@ -1,0 +1,22 @@
+/* LAYOUT WRAPPER */
+.dashboard-layout {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* MAIN CONTENT */
+.dashboard-content {
+   margin-left: 260px;
+  padding-top: 90px;   /* space for fixed header */
+  padding-left: 24px;
+  padding-right: 24px;
+  min-height: 100vh;
+  background: #f6f8ff;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 1024px) {
+  .dashboard-content {
+    margin-left: 0;
+  }
+}
