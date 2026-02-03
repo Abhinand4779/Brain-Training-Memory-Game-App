@@ -69,6 +69,8 @@ TEMPLATES = [
     },
 ]
 
+ROOT_URLCONF = 'brain_trainer_backend.urls'
+
 WSGI_APPLICATION = 'brain_trainer_backend.wsgi.application'
 
 
@@ -124,3 +126,12 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
     ],
 }
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
