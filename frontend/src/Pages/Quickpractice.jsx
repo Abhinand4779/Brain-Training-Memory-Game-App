@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom"; // import useNavigate
-import "./QuickPractice.css";
+import "./Quickpractice.css";
 import Header from "../Components/Header";
 
 export default function QuickPractice() {
